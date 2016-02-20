@@ -1,0 +1,111 @@
+/* $Id: print.css,v 1.1.2.1 2009/02/13 06:40:02 johnalbin Exp $ */
+
+/* underline all links */
+  a:link, a:visited
+  {
+    text-decoration: underline !important;
+  }
+
+  /* Don't underline header */
+  #site-name a:link,
+  #site-name a:visited
+  {
+    text-decoration: none !important;
+  }
+
+/* CSS2 selector to add visible href after links */
+  #content a:link:after,
+  #content a:visited:after
+  {
+  }
+
+/* Un-float the content */
+  #content,
+  #content-inner
+  {
+    float: none;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+/* Turn off any background colors or images */
+  body,
+  #page, #page-inner,
+  #main, #main-inner,
+  #content, #content-inner
+  {
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+/* Hide sidebars and nav elements */
+  #skip-to-nav, #navbar, #sidebar-left, #sidebar-right, #footer,
+  .breadcrumb, div.tabs, .links, .taxonomy,
+  .book-navigation, .forum-topic-navigation, .pager, .feed-icons
+  {
+    visibility: hidden;
+    display: none;
+  }
+
+/* Otherwise, Firefox clips the content after the first page. */
+  #page
+  {
+    overflow-y: visible;
+  }
+
+  
+  /* Added by heather, Aug 2013 - make sure Kultrun schedules print well */
+  #logo {
+     margin-top: 0;
+	 margin-bottom: 0;
+  }
+ #header-inner {
+    margin-bottom: 0;
+}
+#content-inner {
+padding: 0;
+}
+#main-inner {
+   margin: 0;
+}
+
+#content-inner {
+    border: 0 none;
+}
+
+.breadcrumb,
+.view-calendar ul.links,
+.date-prev,
+.date-next,
+#tryptych,
+#quadrant,
+#footer,
+.feed-icon,
+td.week,
+th.days.week,
+#header-blocks,
+#mini-panel-kultrun_menu,
+.maplink,
+.views-exposed-form,
+div.meta,
+.add-to-cart {
+   display: none;
+}
+
+#logo-image {
+    height: 87px;
+}
+
+.panel-flexible {
+    max-width: 7.5in;
+}
+
+.page-festivals-kultrun-artists .panels-flexible-row.panels-flexible-row-2-1.clear-block {
+    display: none;
+}
+.page-festivals-kultrun-artists  thead {
+    display: none;
+}
+	

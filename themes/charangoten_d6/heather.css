@@ -1,0 +1,383 @@
+/*
+Heather is screwing around with Nick's site.  This is rather uncool of her.
+
+So, Heather is trying to contain this to one point of entry, so that Nick can Nuke it quick. 
+
+*/
+
+
+/* this one should make things better for everyone using the date picker */
+#ui-datepicker-div {
+    background-color: tan;
+    border: 2px solid gray;
+    padding: 7px;
+}
+#ui-datepicker-div .ui-datepicker-links div {
+    float: left;
+    margin-right: 20px;
+}
+
+#content .field.field-type-nodereference.field-field-venue h2 {
+    border-bottom: 0;
+}
+#content .field.field-type-nodereference.field-field-venue h2 a {
+    color: #333333;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+
+/* teaser view of artist is more compacted */
+
+#content .node-teaser.node-type-artist ul.links {
+    margin-left: 20px;
+}
+#content .node-teaser.node-type-artist p {
+    line-height: 1.5em;
+    margin-left: 200px;
+    max-height: 93px;
+    overflow: hidden;
+}
+#content .node-teaser.node-type-event p {
+    line-height: 1.5em;
+    max-height: 93px;
+    overflow: hidden;
+}
+.node-teaser.node-type-artist .field.field-type-text.field-field-whattheydo {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 200px;
+    padding-top: 5px;
+}
+.node-teaser.node-type-event .field.field-type-text.field-field-whattheydo {
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 5px;
+}
+#content .node-teaser.node-type-artist h2 {
+     border-bottom: 0 none;
+    margin-left: 200px;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+div.pane-content > div.node.node-teaser {
+    border-top: 1px solid #EEEEEE;
+}
+
+#content .node-teaser.node-type-event h2 {
+    border-bottom: 0 none;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.node-teaser.node-type-artist .field-field-photo {
+    float: left;
+}
+.node-teaser.node-type-event .field-field-poster {
+    float: right;
+}
+.node-teaser.node-type-artist .content * {
+    display:none;
+}
+
+.node-teaser.node-type-artist .content :nth-child(1),
+.node-teaser.node-type-artist .content :nth-child(2),
+.node-teaser.node-type-artist .content :nth-child(3) {
+   display:block;
+}
+
+.node-teaser.node-type-artist .content :nth-child(1) strong,
+.node-teaser.node-type-artist .content :nth-child(2) strong,
+.node-teaser.node-type-artist .content :nth-child(3) strong {
+   display:inline;
+}
+
+/* vertical tabs is tripping on some other setting deep down, and i can't find it.  this works */
+
+.vertical-tabs-panes {
+    position: absolute;
+    width: 383px;
+    background-color: white;
+}
+
+
+/* in ubercart, tickets do not display price - need to select type */
+.page-catalog-neruda-store-tickets .uc-price {
+    display: none;
+    white-space: nowrap;
+}
+.page-catalog-neruda-store-tickets form {
+    display: none;
+}
+table.category-products thead *:nth-child(3) {
+    display: none;
+}
+table.category-products thead *:nth-child(4) {
+    display: none;
+}
+
+/* tickets embedded in event nodes */
+.pane-content-field.pane-field-cost {
+    background-color: #ECE5DF;
+}
+
+.node-type-event .node-teaser.node-type-product {
+    background-color: #ECE5DF;
+    margin-bottom: 15px;
+    padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.node-type-event .field-field-eventdate {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+.node-type-event .maplink {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.inside.panels-flexible-region-inside.panels-flexible-region-11-center-inside.panels-flexible-region-inside-first {
+    text-align: center;
+}
+#content .node-teaser.node-type-product h2 {
+    border-bottom: medium none;
+    font-size: 1.2em;
+}
+.node-teaser.node-type-product .uc-price {
+    display: none;
+    white-space: nowrap;
+}
+.node-teaser.node-type-product  ul.links {
+    display: none;
+}
+.field-field-tickets .node-type-product .product-image,
+.field-field-tickets .node-type-product .product-body {
+    display: none;
+}
+.field-field-tickets .node-teaser.node-type-product {
+
+    width: 100%;
+}
+
+.field-field-tickets .node-teaser #edit-qty-wrapper > label {
+    display: inline;
+}
+.field-field-tickets .node-teaser .attributes label {
+    display: none;
+}
+
+.field-field-tickets .node-teaser .attributes .form-item .form-radios label {
+    display: block;
+}
+.field-field-tickets .node-teaser #edit-qty-wrapper {
+    float: left;
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+/* festival schedule - make headers bigger */
+.view-Festival-Schedule thead {
+    font-size: 1.2em;
+}
+
+.field.field-type-nodereference.field-field-artist {
+    clear: both;
+}
+
+
+
+.node-type-artist .field-field-whattheydo,
+.node-type-event .field-field-whattheydo {
+       padding: 1em 1em 1.25em;
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+    background-color: #FFA561;	
+	font-weight: bold;
+}
+
+
+
+/* in the calendar view of a single day, float the images left */
+.calendar .dayview .view-data-node-node-data-field-artist-node-data-field-photo-field-photo-fid {
+    float: left;
+}
+
+/* in schedules, show the artist picture.  if it is missing, show the event pic.  second item will be hidden */
+.view-Festival-Schedule  .views-field-nothing > :nth-child(2) {
+    display:none;
+}
+
+/* add to calendar needs icons */
+.addthisevent_dropdown  span {
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+
+.addthisevent_dropdown .ateoutlook {
+    background: url("images/outlookicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+	}
+.addthisevent_dropdown .ateoutlook:hover {
+    background: url("images/outlookicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+.addthisevent_dropdown .ategoogle {
+    background: url("images/googleicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .ategoogle:hover {
+    background: url("images/googleicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+	
+.addthisevent_dropdown .ateyahoo {
+    background: url("images/yahoocal.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .ateyahoo:hover {
+    background: url("images/yahoocal.png") no-repeat scroll 0 0 #F7F5C4;
+}
+
+.addthisevent_dropdown .ateical {
+    background: url("images/ical.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+
+.addthisevent_dropdown .ateical:hover {
+    background: url("images/ical.png") no-repeat scroll 0 0 #F7F5C4;
+}
+.addthisevent_dropdown .atehotmail {
+    background: url("images/hotmailicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .atehotmail:hover {
+    background: url("images/hotmailicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+
+
+#atedrop1.addthisevent-drop {
+    color: #960000 !important;
+}
+
+
+
+
+#webform-component-civicrm-1-contact-1-cg4-custom-20 .form-checkboxes .form-item {
+    float: left;
+    margin: 0;
+    width: 177px;
+}
+
+
+#webform-component-civicrm-1-contact-1-email-email {
+    clear: both;
+    padding-top: 12px;
+}
+
+#webform-component-civicrm-1-contact-1-cg4-custom-13, 
+#webform-component-civicrm-1-contact-1-cg4-custom-15,
+#webform-component-civicrm-1-contact-1-cg4-custom-12,
+#webform-component-civicrm-1-contact-1-cg4-custom-16,
+#webform-component-civicrm-1-contact-1-cg4-custom-18 {
+    float: left;
+    width: 275px;
+}
+#webform-component-civicrm-1-contact-1-cg4-custom-15 {
+        padding: 0;
+}
+
+
+
+#webform-component-civicrm-1-contact-1-cg4-custom-15 .form-item,
+#webform-component-civicrm-1-contact-1-cg4-custom-16 .form-item,
+#webform-component-civicrm-1-contact-1-cg4-custom-18 .form-item {
+    margin: 0;
+}
+#webform-client-form-449 .form-checkboxes .form-item, 
+#webform-client-form-449 .form-radios .form-item {
+    margin: 0;
+}
+
+#edit-submitted-civicrm-1-contact-1-cg4-custom-17 {
+    height: 43px;
+    width: 561px;
+}
+#webform-component-civicrm-1-contact-1-cg4-custom-17,
+#webform-component-civicrm-1-contact-1-cg4-custom-20 {
+    clear: both;
+}
+
+#block-block-22 {
+    display: inline-block;
+    left: -66px;
+    top: -46px;
+    width: 200px;
+	position: relative;
+	z-index: 1;
+	padding-left: 68px;
+    padding-top: 12px;	
+}
+
+#tryptych, #quadrant, #footer {
+    z-index: -1;
+}
+
+#content-area {
+    z-index: 10;
+}
+
+.cke_skin_kama {
+    background: white;
+}
+
+
+
+
+.panel-pane.pane-block.pane-block-8 {
+    top: 61px;
+}
+.panel-pane.pane-block.pane-block-14 {
+    top: 85px;
+}
+.panel-pane.pane-block.pane-block-22 {
+    left: 708px;
+    top: 113px;
+    width: 200px;
+}
+
+
+
+.view-uc-orders table caption {
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+.view-uc-orders table {
+    width: 100%;
+}
+.view-uc-orders .view-header {
+    display: none;
+}
+
+#block-block-14 {
+    z-index: 100;
+}
+#block-block-22 p {
+    margin: 0;
+    padding: 0;
+}
+

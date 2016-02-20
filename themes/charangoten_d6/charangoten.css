@@ -1,0 +1,1643 @@
+/* $Id: zen.css,v 1.14.2.6 2009/11/05 11:03:32 johnalbin Exp $ */
+
+/*
+ * ZEN STYLES
+ *
+ * This is an example stylesheet. Sub-themes should NOT include the zen/zen.css
+ * file, but instead copy this CSS to their own stylesheets.
+ *
+ * In this stylesheet, we have included all of the classes and IDs from this
+ * theme's tpl.php files. We have also included many of the useful Drupal core
+ * styles to make it easier for theme developers to see them.
+ *
+ * Many of these styles are over-riding Drupal's core stylesheets, so if you
+ * remove a declaration from here, the styles may still not be what you want
+ * since Drupal's core stylesheets are still styling the element. See the
+ * drupal6-reference.css file for a list of all Drupal 5.x core styles.
+ *
+ * In addition to the style declarations in this file, other Drupal styles that
+ * you might want to override or augment are those for:
+ *
+ *   Book Navigation  See line 74  of Zen's drupal6-reference.css file
+ *   Forum            See line 197 of Zen's drupal6-reference.css file
+ *   Menus            See line 667 of Zen's drupal6-reference.css file
+ *   News Aggregator  See line 20  of Zen's drupal6-reference.css file
+ *   Polls            See line 287 of Zen's drupal6-reference.css file
+ *   Search           See line 320 of Zen's drupal6-reference.css file
+ *   User Profiles    See line 945 of Zen's drupal6-reference.css file
+ */
+
+
+/** body **/
+  body
+  {
+    margin: 0;
+    padding: 10px;
+	background: url(images/SiteTempBG4.jpg) no-repeat top center ; /*Temporary BG nc*/
+	/*background-attachment: fixed;*/
+ }
+
+  #page
+  {
+  }
+
+  #page-inner
+  {
+  }
+
+/** header **/
+  #header
+  {
+  }
+
+  #header-inner
+  {
+  margin-bottom: 10px;
+  padding: 0px;
+  }
+
+  #logo-title /* Wrapper for logo, website name, and slogan */
+  {
+  }
+
+  #logo /* Wrapper for logo */
+  {
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+
+  #logo-image /* The actual logo image */
+  {
+  }
+
+  h1#site-name, div#site-name /* The name of the website */
+  {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+
+  #site-name a:link,
+  #site-name a:visited
+  {
+    color: #000;
+    text-decoration: none;
+  }
+
+  #site-name a:hover
+  {
+    text-decoration: underline;
+  }
+
+  #site-slogan /* The slogan (or tagline) of a website */
+  {
+  }
+
+  #header-blocks /* Wrapper for any blocks placed in the header region */
+  {
+  }
+
+/** main (container for everything else) **/
+  #main
+  {
+  }
+
+  #main-inner
+  {
+  }
+
+/** content **/
+  #content
+  {
+  }
+
+  #content-inner
+  {
+  }
+
+  #mission /* The mission statement of the site (displayed on homepage) */
+  {
+  }
+
+  #content-top /* Wrapper for any blocks placed in the "content top" region */
+  {
+  }
+
+  #content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */
+  {
+  }
+
+  .breadcrumb /* The path to the current page in the form of a list of links */
+  {
+    padding-bottom: 0; /* Undo system.css */
+  }
+
+  h1.title, /* The title of the page */
+  h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+  h3.title /* Comment title */
+  {
+    margin: 0;
+  }
+
+  div.messages /* Important messages (status, warning, and error) for the user */
+  {
+  }
+
+  div.status /* Normal priority messages */
+  {
+  }
+
+  div.warning, tr.warning /* Medium priority messages */
+  {
+    /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+  }
+
+  div.error, tr.error /* High priority messages. See also the .error declaration below. */
+  {
+  }
+
+  div.tabs /* See also the tabs.css file. */
+  {
+  }
+
+  .help /* Help text on a page */
+  {
+    margin: 1em 0;
+  }
+
+  .more-help-link /* Link to more help */
+  {
+    font-size: 0.85em;
+    text-align: right;
+  }
+
+  #content-area /* Wrapper for the actual page content */
+  {
+  }
+
+  ul.links /* List of links */
+  {
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  ul.links.inline
+  {
+    margin: 0;
+    display: inline;
+  }
+
+  ul.links li
+  {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+  }
+
+  .pager /* A list of page numbers when more than 1 page of content is available */
+  {
+    clear: both;
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  .pager a, .pager strong.pager-current
+  {
+    padding: 0.5em;
+  }
+
+  .feed-icons /* The links to the RSS or Atom feeds for the current list of content */
+  {
+    margin: 1em 0;
+  }
+
+  #content-bottom /* Wrapper for any blocks placed in the "content bottom" region */
+  {
+  }
+
+/** navbar **/
+  #navbar
+  {
+  }
+
+  #navbar-inner
+  {
+  }
+
+  #search-box /* Wrapper for the search form */
+  {
+  }
+
+  #edit-search-theme-form-1-wrapper label /* Label that says "Search this site:" */
+  {
+    display: none;
+  }
+
+  #primary /* Primary links */
+  {
+  }
+
+  #secondary /* Secondary links */
+  {
+  }
+
+/** sidebar-left **/
+  #sidebar-left
+  {
+  }
+
+  #sidebar-left-inner
+  {
+  }
+
+/** sidebar-right **/
+  #sidebar-right
+  {
+  }
+
+  #sidebar-right-inner
+  {
+  }
+
+/** footer **/
+  #footer
+  {
+  }
+
+  #footer-inner {
+	background: #fff;
+  }
+
+  #footer h2 {
+	font: 18px Helvetica, Arial, Verdana, Sans-Serif; 
+	color: #960000;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+  
+  #footer ul {
+	list-style: none;
+	padding: 0px;
+  }
+  
+  #footer-message /* Wrapper for the footer message from Drupal's "Site information" and for any blocks placed in the footer region */
+  {
+	padding: 9px 0px 9px 0px;
+	text-align: center;
+	color: #666;
+	background: #fff;
+	clear: both;
+  }
+
+/** closure **/
+  #closure-blocks /* Wrapper for any blocks placed in the closure region */
+  {
+  }
+
+/** Drupal nodes **/
+  .node /* Node wrapper */
+  {
+  }
+
+  .node-inner /* Additional wrapper for node */
+  {
+  }
+
+  .sticky /* A sticky node (displayed before others in a list) */
+  {
+  }
+
+  .node-unpublished /* Unpublished nodes */
+  {
+    /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+  }
+
+  .node-unpublished div.unpublished, /* The word "Unpublished" displayed beneath the content. */
+  .comment-unpublished div.unpublished
+  {
+    height: 0;
+    overflow: visible;
+    color: #d8d8d8;
+    font-size: 75px;
+    line-height: 1;
+    font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word; /* A very nice CSS3 property */
+  }
+
+  .node-mine /* A node created by the current user */
+  {
+  }
+
+  .node-teaser /* A node displayed as teaser */
+  {
+  }
+
+  /* All nodes are given a node-type-FOO class that describes the type of
+   * content that it is. If you create a new content type called
+   * "my-custom-type", it will receive a "node-type-my-custom-type" class.
+   */
+  .node-type-page /* Page content node */
+  {
+  }
+
+  .node-type-story /* Story content node */
+  {
+  }
+
+  .node h2.title /* Node title */
+  {
+  }
+
+  .marker /* "New" or "Updated" marker for content that is new or updated for the current user */
+  {
+    color: #c00;
+  }
+
+  .node .picture /* The picture of the node author */
+  {
+  }
+
+  .node.node-unpublished .picture,
+  .comment.comment-unpublished .picture
+  {
+    position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
+  }
+
+  .node .meta /* Wrapper for submitted and terms data */
+  {
+  }
+
+  .node .submitted /* The "posted by" information */
+  {
+  display:none;
+  }
+
+  .node .terms /* Node terms (taxonomy) */
+  {
+  }
+
+  .node .content /* Node's content wrapper */
+  {
+  }
+
+  .node ul.links /* Node links. See also the ul.links declaration above. */
+  {
+  }
+
+  .preview .node /* Preview of the content before submitting new or updated content */
+  {
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+/** Drupal comments **/
+  #comments /* Wrapper for the list of comments and its title */
+  {
+    margin: 1em 0;
+  }
+
+  #comments-title /* Heading for the list of comments */
+  {
+  }
+
+  .comment /* Wrapper for a single comment */
+  {
+  }
+
+  .comment-inner /* Additional wrapper for a single comment */
+  {
+  }
+
+  .comment-preview /* Preview of the comment before submitting new or updated comment */
+  {
+  }
+
+  .comment.new /* A new comment since the user last viewed the page. */
+  {
+  }
+
+  .comment.odd /* An odd-numbered comment in the list of comments */
+  {
+  }
+
+  .comment.even /* An even-numbered comment in the list of comments */
+  {
+  }
+
+  .comment.first /* The first comment in the list of comments */
+  {
+  }
+
+  .comment.last /* The last comment in the list of comments */
+  {
+  }
+
+  .comment-unpublished /* Unpublished comments */
+  {
+    /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+  }
+
+  .comment-unpublished div.unpublished /* The word "Unpublished" displayed beneath the content. See also the div.unpublished declaration in the node section above. */
+  {
+  }
+
+  .comment-published /* Published comments */
+  {
+  }
+
+  .comment-by-anon /* A comment created by an anonymous user */
+  {
+  }
+
+  .comment-by-author /* A comment created by the node's author */
+  {
+  }
+
+  .comment-mine /* A comment created by the current user */
+  {
+  }
+
+  .comment h3.title /* Comment title */
+  {
+  }
+
+  .new /* "New" marker for comments that are new for the current user */
+  {
+    color: #c00;
+  }
+
+  .comment .picture /* The picture of the comment author */
+  {
+  }
+
+  .comment .submitted /* The "posted by" information */
+  {
+  }
+
+  .comment .content /* Comment's content wrapper */
+  {
+  }
+
+  .comment .user-signature /* The user's signature */
+  {
+  }
+
+  .comment ul.links /* Comment links. See also the ul.links declaration above. */
+  {
+    margin: 1em 0;
+  }
+
+  .indented /* Nested comments are indented */
+  {
+    /* margin-left: 25px; */ /* Drupal core uses a 25px left margin */
+  }
+
+  .preview .comment /* Preview of the comment before submitting new or updated comment */
+  {
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+/** Drupal blocks **/
+  .block /* Block wrapper */
+  {
+    margin-bottom: 1em;
+  }
+
+  .block.region-odd /* Zebra striping for each block in the region */
+  {
+  }
+
+  .block.region-even /* Zebra striping for each block in the region */
+  {
+  }
+
+  .block.odd /* Zebra striping independent of each region */
+  {
+  }
+
+  .block.even /* Zebra striping independent of each region */
+  {
+  }
+
+  .region-count-1 /* Incremental count for each block in the region */
+  {
+  }
+
+  .count-1 /* Incremental count independent of each region */
+  {
+  }
+
+  .block-inner /* Additional wrapper for block */
+  {
+  }
+
+  .block h2.title /* Block title */
+  {
+  }
+
+  .block .content /* Block's content wrapper */
+  {
+  }
+
+  #block-aggregator-category-1 /* Block for the latest news items in the first category */
+  {
+  }
+
+  #block-aggregator-feed-1 /* Block for the latest news items in the first feed */
+  {
+  }
+
+  #block-block-1 /* First administrator-defined block */
+  {
+  }
+
+  #block-blog-0 /* "Recent blog posts" block */
+  {
+  }
+
+  #block-book-0 /* "Book navigation" block for the current book's table of contents */
+  {
+  }
+
+  #block-comment-0 /* "Recent comments" block */
+  {
+  }
+
+  #block-forum-0 /* "Active forum topics" block */
+  {
+  }
+
+  #block-forum-1 /* "New forum topics" block */
+  {
+  }
+
+  #block-menu-primary-links /* "Primary links" block */
+  {
+  }
+
+  #block-menu-secondary-links /* "Secondary links" block */
+  {
+  }
+
+  #block-node-0 /* "Syndicate" block for primary RSS feed */
+  {
+  }
+
+  #block-poll-0 /* "Most recent poll" block */
+  {
+  }
+
+  #block-profile-0 /* "Author information" block for the profile of the page's author */
+  {
+  }
+
+  #block-search-0 /* "Search form" block */
+  {
+  }
+
+  #block-statistics-0 /* "Popular content" block */
+  {
+  }
+
+  #block-user-0 /* "User login form" block */
+  {
+  }
+
+  #block-user-1 /* "Navigation" block for Drupal navigation menu */
+  {
+  }
+
+  #block-user-2 /* "Who's new" block for a list of the newest users */
+  {
+  }
+
+  #block-user-3 /* "Who's online" block for a list of the online users */
+  {
+  }
+
+/** Drupal boxes **/
+  /* Wrapper for Comment form, Comment viewing options, Menu admin, and
+   * Search results.
+   */
+  .box /* Wrapper for box */
+  {
+  }
+
+  .box-inner /* Additional wrapper for box */
+  {
+  }
+
+  .box h2.title /* Box title */
+  {
+  }
+
+  .box .content /* Box's content wrapper */
+  {
+  }
+
+/** Miscellaneous Drupal styles **/
+  .error /* Errors that are separate from div.messages status messages (see above.) */
+  {
+    /* color: #e55; */ /* Drupal core uses a #e55 background */
+  }
+
+  .warning /* Warnings that are separate from div.messages status messages (see above.) */
+  {
+    /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+  }
+
+  .more-link /* Aggregator, blog, and forum more link */
+  {
+    text-align: right;
+  }
+
+  #user-login-form /* Drupal's default login form */
+  {
+    text-align: left;
+  }
+
+  tr.even /* Some tables have rows marked even or odd. */
+  {
+    /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  }
+
+  tr.odd
+  {
+    /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  }
+
+  li a.active /* The active item in a Drupal menu */
+  {
+    color: #333;
+  }
+
+
+/** Drupal forms **/
+  .form-item, /* Wrapper for a form element (or group of form elements) and its label */
+  .form-checkboxes,
+  .form-radios
+  {
+    margin: 1em 0;
+  }
+
+  .form-item input.error, /* Highlight the form elements that caused a form submission error */
+  .form-item textarea.error,
+  .form-item select.error
+  {
+    border: 2px solid #c00;
+  }
+
+  .form-item label /* The label for a form element */
+  {
+    display: block;
+    font-weight: bold;
+  }
+
+  .form-item label.option /* The label for a radio button or checkbox */
+  {
+    display: inline;
+    font-weight: normal;
+  }
+
+  .form-required /* The part of the label that indicates a required field */
+  {
+    color: #c00;
+  }
+
+  .form-item .description /* The descriptive help text (separate from the label) */
+  {
+    font-size: 0.85em;
+  }
+
+  .form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
+  .form-radios .form-item
+  {
+    margin: 0.4em 0;
+  }
+
+  #search-block-form .form-submit /* The submit button */
+  {
+  width: 25px;
+  height: 25px;
+  }
+
+  .container-inline div, .container-inline label /* Inline labels and form divs */
+  {
+    display: inline;
+  }
+
+  .tips /* Tips for Drupal's input formats */
+  {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+
+/** OpenID **/
+  /* The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+  #user-login-form ul /* OpenID creates a new ul above the login form's links. */
+  {
+    margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+  }
+
+  #user-login-form li.openid-link /* The "Log in using OpenID" links. */
+  {
+    margin-top: 1em;
+    margin-left: -20px; /* Un-do some of the padding on the ul list. */
+  }
+
+  #user-login-form li.user-link /* The "Cancel OpenID login" links. */
+  {
+    margin-top: 1em;
+  }
+
+  #user-login ul
+  {
+    margin: 1em 0;
+  }
+
+  #user-login li.openid-link, /* The OpenID links on the /user form. */
+  #user-login li.user-link
+  {
+    margin-left: -2em; /* Un-do all of the padding on the ul list. */
+  }
+
+/** Drupal admin tables **/
+  /* We overrode these styles in html-elements.css, but restore them for the
+   * forms on the site.
+   */
+  form tbody
+  {
+    border-top: 1px solid #ccc;
+  }
+
+  form th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+
+  form tbody th
+  {
+    border-bottom: 1px solid #ccc;
+  }
+
+  form thead th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+
+/* Custom CSS for Charango Ten */
+  
+/* General Anchors */
+  
+  a, a:visited{
+	color: #981b1e;
+	text-decoration: none;
+	}
+a:hover{
+	color: #333333;
+	text-decoration: underline;
+	}
+  
+/* Layout CSS - Move to Layout.css or up to the beginning CleanUp ?? */
+
+  #body {
+	/*color: #FFFFFF; */
+    font: 11px Verdana,Helvetica,Arial,Sans-Serif;
+  }
+  
+  #page {
+  font-size: 0.875em;
+  line-height: 1.286em;
+  }
+  
+  #content {
+	/*background: #ffffff;*/ /*Replaced by 1px BG */
+  }
+  
+  #content-inner {
+ /* margin-left: 10px;*/
+  /*padding: 0px 10px 0px 10px;*/
+  border-top: thin solid #666;
+  background: #ffffff;
+  }
+  
+  #sidebar-left {
+	/*background: #ffffff;*/
+	/* background: transparent url(images/sidebar_bg.png); */ /* Replaced by 1px BG */
+}
+
+   #sidebar-left-inner {
+
+}
+
+  #sidebar-right {
+	/*background: #ffffff;*/
+	/* background: transparent url(images/sidebar_bg.png); */ /* Replaced by 1px BG */
+}
+
+#sidebar-right-inner {
+	border-top: thin solid #666;
+}
+
+#footer {
+	background: url(images/background_footer.jpg) centre no-repeat;
+	width: 960px;
+	clear: both;
+}
+
+#footer-inner {
+	/* CLEAN There are multiple instances of footer and footer-inner in this css. Consolidate on clean-up */
+	clear: both;
+    margin: 10px 10px 20px;
+    padding-top: 0;
+}
+  
+#logo {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+  }
+  
+/* Header Blocks*/
+
+#header-blocks {
+float: right;
+width:140px;
+height: 210px;
+margin-right: 0px;
+margin-left: 10px;
+/*margin-bottom: 20px;*/
+clear: right;
+}
+
+#block-search-0 /* "Search form" block */
+  {
+	/*float: right;*/
+	/* position: relative;
+	top: 10px; */
+	float: right;
+	width: 140px;
+	margin-right: 10px;
+  }  
+
+#block-block-1 /* By default First Administrator defined block, as above. Social Networking Icons */
+{ 
+	float: right;
+	width: 140px;
+	margin-right: 10px;
+}
+  
+  div.ddblock-cycle-upright40 div.container, .main-inner {
+	-moz-box-shadow: 0px 10px 10px #555; 
+	-webkit-box-shadow: 0px 10px 30px #555; 
+    box-shadow: 0px 10px 10px #555;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=180, Color='#555555')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=180, Color='#555555');
+  }
+
+#slideshow .title {
+	display: none;
+	}
+
+/* Navbar (Move above to Line 216 CleanUp */
+
+#navbar {
+	width: 960px;
+	height: 65px;
+	border: #999999 solid thin;
+	clear: both;
+}
+
+#navbar-inner {
+	margin: 0px;
+	padding: 0px;
+	padding-top: 8px;
+	height: 65px;
+	background: url(images/primarylinks_bg_subnav3.png) repeat-x;
+	clear: both;
+}
+
+/* Persistent Menu Block Styles */
+
+div#block-dynamic_persistent_menu-0 {
+	display: inline;
+	padding-top: 8px;
+	margin-bottom: 0px;
+	height: 65px;
+}
+
+div#block-dynamic_persistent_menu-0  div.block-inner{
+	/*width: 780px;*/
+	height: 65px;
+	float: left;
+}
+
+div#block-dynamic_persistent_menu-0 div.content {
+	height: 57px;
+}
+
+.dynamic-persistent-menu-menu-item ,.dynamic-persistent-menu-sub-menu-item{
+  display:inline;
+}
+
+.dynamic-persistent-menu-sub-menu-item {
+	margin-left: 0px;
+	}
+
+ul.dynamic-persistent-menu-menu {
+	height: 32px;
+	margin-bottom: 10px;
+}
+	
+.dynamic-persistent-menu-menu li {
+	height: 40px;
+	display: inline;
+	margin: 0px;
+	padding: 11px 15px 10px 15px;
+}
+	
+.dynamic-persistent-menu-menu-item a {
+	font-size: 1.6em;
+	margin: 0px;
+	height: 40px;
+	text-transform: lowercase;
+}
+
+.dynamic-persistent-menu-menu li:hover {
+	background: #FFF;
+}
+
+.dynamic-persistent-menu-menu:first-child a {
+	margin-left: 0px;
+}
+
+ul.dynamic-persistent-menu-sub-menu {
+
+}
+	
+.dynamic-persistent-menu-sub-menu li {
+	
+}
+
+.dynamic-persistent-menu-sub-menu li a {
+	line-height: 1.75em;
+	margin: 0px 0px 0px 20px;
+	padding: 3px 5px 4px 5px;
+	height: 25px;
+}
+
+.dynamic-persistent-menu-sub-menu li a:hover {
+	background: #555;
+	color: #fff;
+	text-decoration: none;
+}
+
+.dynamic-persistent-menu-sub-menu li a.active {
+	background: #555;
+	color: #fff;
+}
+
+/* Search Form */
+
+div#block-search-0 .block-inner {
+	float: left;
+	width: 140px;
+}
+
+#block-search-0 h2.title {
+	display: none;
+}
+
+#edit-search-block-form-1-wrapper  {
+	margin: 0px 0px 11px 0px;
+	float: left;
+}
+
+#edit-search-block-form-1 {
+	width: 100px;
+}
+
+#search-block-form .form-submit {
+	float: left;
+}
+
+/* Content HTML Styles*/
+
+/* Heather's Essentials from Rockin' Chrome - Nick has started to tweak some...*/	
+
+  #content p {
+	margin: 0;
+	line-height: 2em;
+	padding: 0 0 10px 0;
+	}
+.front #content p {
+	line-height: 1.286em;
+}	
+#content p img{
+	border: none;
+	margin-right: 5px;
+	margin-bottom: 3px;
+	}
+#content h1 {
+	/*font: normal 22px Helvetica Bold, Arial Bold, Verdana, Sans-Serif;*/
+	font: bold 24px Helvetica,Arial,Verdana,Sans-Serif;	
+	color: #960000;
+	padding: 0px 10px 0px 0px;
+	line-height: 150%;
+	margin: 0;
+	}
+	
+#content h1 a  {
+	color: #960000;
+	font-weight: bold;
+	}
+
+#content h1 a:hover {
+	color: red;
+	text-decoration: none;
+	}
+
+#content h2 {
+	font: bold 22px Helvetica, Arial, Verdana, Sans-Serif; 
+	color: #981b1e;
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0 0 8px 0;
+	line-height: 120%;
+	}
+	
+#content h2 a  {
+	color: #981b1e;
+	text-decoration: none;
+	}
+	
+#content h2 a:hover {
+	color: #333;
+	text-decoration: none;
+	}
+
+#block-views-tracker-block_2 div.block-inner h2:nth-type(1){
+	color: #333;
+	border: none;
+	font-size: 28px;
+	line-height: 140%;
+}
+
+#content h3 {
+	font: bold 15px Helvetica, Arial, Verdana, Sans-Serif; 
+	color: #333333;
+	margin-bottom: 10px;
+	line-height: 120%;
+	border-bottom: 1px solid #cccccc;
+	}
+#content h3 a  {
+	color: #981b1e; /* #ff3333; */  /* Off-Color bright red. Change? */
+	text-decoration: none;
+	}
+#content h3 a:hover {
+	color: #000000;
+	text-decoration: none;
+	}
+#content ol {
+	list-style: decimal; 
+	line-height: 18px;
+	margin: 0;
+	padding: 0 0 10px 30px;
+	}
+#content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 20px 0;
+	}
+#content li {
+	margin: 0;
+	padding: 0;
+	}
+#content ul li {
+	list-style: square inside;
+	margin: 0 0 0 10px;
+	padding: 5px 0 0 0;
+	}
+#content ul li a {
+	color: #981b1e; /* #ff3333; */  /* Off Colour bright red. Change?*/
+	text-decoration: none;
+	}
+#content ul li a:hover {
+	color: #000000;
+	text-decoration: underline;
+	}
+blockquote {
+	margin: 0 0 0 25px;
+	padding: 0 25px 0 10px;
+	font-style: italic;
+	color: #666666;
+	border-left: 1px solid #ffcc33;
+	}
+#content blockquote p{
+	margin: 0 0 20px 0;
+	padding: 0;
+	}
+.postspace {
+	width: 440px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	}
+.postspace2 {
+	width: 440px;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	}
+.postspace3 {
+	width: 440px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	}
+
+/* more space around the teasers on the front page */
+.front .node-teaser /* A node displayed as teaser */
+  {
+    margin: 3em 0px 0em 0px;
+    padding: 1em 0px 0em 0px;
+  }
+
+/* Sidebar Left and Right Styles should be changed to aside? when upgraded to HTML5 spec? */
+	
+#sidebar-left a, #sidebar-right a {
+	color: #981b1e;
+	text-decoration: none;
+}
+
+#sidebar-right #block-views-tracker-block_1 a {
+	border-top: thin solid #ddd;
+}
+
+#sidebar-right .block-user a {
+	border-top: 1px solid #666;
+}
+
+#sidebar-left a:hover, #sidebar-right a:hover  {
+	color: #666666;
+	text-decoration: underline;
+	}
+#sidebar-left p, #sidebar-right p {
+	margin: 0;
+	line-height: 16px;
+	padding: 5px 0 10px 0;
+	}
+	
+#sidebar-left h2, #sidebar-right h2 {
+	font: 18px Helvetica, Arial, Verdana, Sans-Serif; 
+	/*color: #444444;*/
+	color: #960000;
+	list-style: none;
+	padding: 10px 0 10px 0;
+	margin: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+	
+#sidebar-left ul, #sidebar-left li, #sidebar-left ul li {
+  text-align: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	
+#sidebar-right ul, #sidebar-right li, #sidebar-right ul li {
+    text-align: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+  
+#sidebar-left ul.children, #sidebar-right ul.children {
+	margin-right: 15px;
+	}
+	
+#sidebar-left ul li a, #sidebar-right ul li a {
+	font: 13px Helvetica, Arial, Verdana, Sans-Serif; 
+	display: block;
+	color: #981b1e;
+	text-decoration: none;
+	padding: 5px 0 5px 0;
+	}
+	
+#sidebar-left ul li a:hover, #sidebar-right ul li a:hover {
+	color: #333; /*#ff3333;*/
+	/*font-weight: bold;*/
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	}
+
+#sidebar-right div.block  {
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #666;
+}
+
+/*
+#sidebar-right li:hover {
+	background: #ccc;
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #fff;
+}
+*/
+	
+/* calendar view on the side - indent the date, closer to header, and spacing between events better */
+
+div#block-views-calendar-block_3 li {
+	border-bottom: #999 1px solid;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+}
+
+div#block-views-calendar-block_3  div.views-field-field-eventdate-value, div#block-views-calendar-block_3  div.views-field-field-onlinetickets-url, div#block-views-calendar-block_3 div.views-field-field-location-value {
+	padding-left: 7px;
+}
+
+div#block-views-calendar-block_3  div.views-field-title a {
+   font-size: 1.1em;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+}
+
+/* Special Styles for Links in Upper Right */
+
+#block-block-9 {
+	font-size: 1.5em;
+}
+
+/* Slideshow Layout */
+
+div#slideshow  {
+	height: 300px;
+}
+
+ div#slideshow-inner {
+	float: left;
+	width: 940px;
+	margin: 10px 10px 20px 10px;
+	padding: 0px;
+	/*-moz-box-shadow: 0px 10px 10px #555; 
+	-webkit-box-shadow: 0px 10px 10px #555; 
+    box-shadow: 0px 10px 10px #555;*/ 
+	clear: both;
+}
+
+ div#slideshow-inner .block {
+	margin-bottom: 0em;
+}
+	
+/* ddblock custom css.  Most ddblock css styling directly in ddblock-cycle-upright40 in charangoten/custom/modules/ */
+
+#slideshow div.ddblock-cycle-upright40 div.slide-title-horizontal{width:620px; height:30px; white-space:nowrap;}
+#slideshow div.ddblock-cycle-upright40 div.slide-body-horizontal{width:1px;}
+
+
+/* Custom Board CSS */
+/* board tools need some visibility improvements */
+#sidebar-right table td a
+{
+   color: black;
+   font-size: 1.2em;
+}
+
+/* html .js > body .not-front logged-in two-sidebars page-admin-build-views section-admin lightbox-processed admin-menu > div #page > div #page-inner > div #main > div #main-inner .clear-block > div #sidebar-right > div #sidebar-right-inner .region region-right > div #block-views-og_my-block_1 .block block-views region-even even region-count-2 count-8 with-block-editing > div .block-inner > div .content > div .view view-og-my view-id-og_my view-display-id-block_1 view-dom-id-3 > div .view-content > table .views-table cols-4 > tbody > tr .odd views-row-first > td .views-field views-field-title active */
+
+/* html .js > body .not-front logged-in two-sidebars page-users-heather section-users lightbox-processed > div #page > div #page-inner > div #main > div #main-inner .clear-block > div #sidebar-right > div #sidebar-right-inner .region region-right > div #block-faceted_search_ui-1_guided .block block-faceted_search_ui region-even even region-count-4 count-10 > div .block-inner > div .content > div .faceted-search-facet faceted-search-env-board_libaray_search faceted-search-facet--taxonomy--6 faceted-search-facet-inactive faceted-search-guided */
+
+ #sidebar-right #block-faceted_search_ui-1_guided a
+ {
+    display: inline;
+}
+
+.views-field-post-count, .views-field-member-count {
+	text-align: center;
+}
+
+/* Views Edit Float - Group with Block Edit 'edit' floating menu? */
+
+.views-admin-links ul, .views-admin-links ul:hover {
+	background: #fff;
+}
+
+/* Tiny MCE Content Body fix - removes background from editing widget body background deprecated in HTML 5?? */
+
+.mceContentBody  {
+	background: none;
+}
+
+/* Vertical Menu Drupal Leaf Styling ??? */
+
+/*
+ * modules/system/system-menus.css
+ */
+
+#sidebar-right .block-user ul.menu {
+  list-style: none;
+  border: none;
+  text-align:left; /* LTR */
+}
+#sidebar-right .block-user ul.menu li {
+  margin: 0 0 0 0.5em; /* LTR */
+}
+/*#sidebar-right .block-user li.expanded li li{
+	list-style-type: none;
+}*/
+#sidebar-right .block-user li.expanded {
+  list-style-type: circle;
+  /*color: #981b1e;*/
+  list-style-image: url(images/menu-expanded.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+#sidebar-right .block-user li.collapsed {
+  list-style-type: disc;
+  /*color: #666;*/
+  list-style-image: url(images/menu-collapsed.png); /* LTR */
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+#sidebar-right .block-user li.leaf {
+  list-style-type: square;
+  /*color: #981b1e;*/
+  list-style-image: url(images/menu-leaf.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+#sidebar-right .block-user li a.active {
+  color: #000;
+}
+#sidebar-right .block-user td.menu-disabled {
+  background: #ccc;
+}
+#sidebar-right .block-user ul.links {
+  margin: 0;
+  padding: 0;
+}
+#sidebar-right .block-user ul.links.inline {
+  display: inline;
+}
+#sidebar-right .block-user ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+#sidebar-right .block-user .block ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+
+/* Freaky Column issue */
+
+#main-inner {
+	margin: 10px 10px 20px 10px;
+	padding-top: 0px;
+	clear:both;
+}
+
+/* Social Icons*/
+
+.social-icon {
+	height: 32px;
+	width:32px;
+}
+
+/* Halves - Used for Support Us */
+
+#half {
+	width: 960px;
+	position: relative;
+	overflow: visible;
+    word-wrap: break-word;
+	
+}
+
+#half h2 {
+	color: #ffd700;
+}
+
+#half p {
+	color: #daa520;
+}
+
+#half-inner {
+	/*background: transparent url(images/half_bg.png) center top repeat-y;*/
+	clear: both;
+    margin: 10px 10px 20px 10px;
+    padding-top: 0;
+}
+
+#half-left, #half-right {
+	float: left;
+    width: 460px;
+    margin-left: 0;
+    margin-right: 20px; /* Negative value of #sidebar-left's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #half-left-inner etc. */
+}
+
+#half-left, #half-right {
+	border-top: #666 1px solid;
+	}
+
+#half-left {
+	margin-left: 0px;
+}
+
+#half-right {
+	margin-right: 0px;
+}
+
+.half-left-inner, .half-right-inner {
+	background: #fff;
+	padding: 15px;
+}
+
+/* Tryptych - Move to Layout? Or Up? */
+
+#tryptych {
+	width: 960px;
+	position: relative;
+	overflow: visible;
+}
+
+#tryptych h2, #tryptych p {
+	color: #fff;
+}
+
+#tryptych-inner {
+	background: transparent url(images/tryptych_bg.png) center top repeat-y;
+	clear: both;
+    margin: 10px 10px 20px 10px;
+    padding-top: 0;
+}
+
+#tryptych-left, #tryptych-centre, #tryptych-right {
+	float: left;
+    width: 300px;
+    margin-left: 0;
+    margin-right: 20px; /* Negative value of #sidebar-left's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #tryptych-left-inner etc. */
+}
+
+#tryptych-left, #tryptych-centre, #tryptych-right {
+	border-top: #666 1px solid;
+	}
+
+
+#tryptych-left {
+	margin-left: 0px;
+}
+
+#tryptych-right {
+	margin-right: 0px;
+}
+
+.tryptych-left-inner, .tryptych-centre-inner, .tryptych-right-inner {
+	padding: 15px;
+}
+
+/* Quadrants */
+
+#quadrant {
+	width: 960px;
+	position: relative;
+	overflow: visible;
+}
+
+#quadrant h2 {
+	color: #960000;
+}
+
+#quadrant p {
+	color: #daa520;
+}
+
+#quadrant-inner {
+	/*background: transparent url(images/quadrant_bg.png) center top repeat-y;*/
+	background: transparent url(images/1px_460px_220px_220px.png) center top repeat-y;
+	clear: both;
+    margin: 10px 10px 20px 10px;
+    padding-top: 0;
+}
+
+#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+	float: left;
+    width: 220px;
+    margin-left: 0;
+    margin-right: 20px; /* Negative value of #sidebar-left's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #quadrant-left-inner etc. */
+}
+
+#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+	border-top: #666 1px solid;
+}
+
+#quadrant-left {
+	margin-left: 0px;
+}
+
+#quadrant-right {
+	margin-right: 0px;
+}
+
+.quadrant-left-inner, .quadrant-centre-left-inner, .quadrant-centre-right-inner, .quadrant-right-inner {
+	/*background: #fff;*/ 
+	padding: 15px;
+}
+
+#quadrant h3 {
+	color: #666;
+}
+
+#footer-inner {
+	/*background: url(images/220px_x4.png) left top repeat-y;*/
+	background: #fff;
+}
+
+/* #footer .quadrant-left-inner, #footer .quadrant-centre-left-inner, #footer .quadrant-centre-right-inner, #footer .quadrant-right-inner {
+	background: url(images/220px_x4.png) left top repeat-y;
+}*/
+
+/* Move to Layout or Up */
+
+.sidebar-right #main-inner {
+	background: transparent url(images/content_bg_90.png) repeat-y top;
+}
+
+/*Style for Dates and Tickets on Event Pages - may be a more elegant way to do this*/
+
+div.content div.field-field-eventdate, div.field-field-location, div.field-field-cost {
+	color: #333;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.3em;
+}
+
+div.content div.field-field-cost, div.field-field-onlinetickets {
+	padding-bottom: 10px;
+}
+
+.field .field-label, .field .field-label-inline, .field .field-label-inline-first {
+    color: #555;
+}
+
+/* Quick-fix for Slideshow Image Label and Slideshow Image. Cleanup after transition? */
+
+.content .field-field-slideshow-image .field-label, .content .field-field-slideshow-image .field-items {
+	display: none;
+}
+
+/* Cleanup backend select boxes keep them from running under sidebar. */
+.section-admin select {
+    max-width: 120px;
+}
+
+/* Content Views */
+
+.view-id-Artists table.col-3 td {
+	width: 180px;
+	vertical-align: top;
+}
+
+.view-id-Artists table.col-3 td {
+	padding-right: 20px;
+}
+
+.view-id-Artists table.col-3 td.col-last {
+	padding-right: 0px;
+}
+
+.view-id-artists .col-3 td:last {
+	margin-right: 0px;
+}
+
+/* kultrun survey 2013 */
+#node-466 {
+    background: none repeat scroll 0 0 #FEF3D0;
+    padding: 15px;
+}
+
+/* Region Sponsors */
+
+#sponsors-inner {
+	padding: 0px 10px;
+}
+
+#sponsors-inner h2 {
+	border-top: #666 solid 1px;
+	background: #ffcc33;
+)

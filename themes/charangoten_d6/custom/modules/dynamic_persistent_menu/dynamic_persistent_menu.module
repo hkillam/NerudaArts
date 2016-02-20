@@ -1,0 +1,253 @@
+<?php
+// $Id: dynamic_persistent_menu.module,v 1.1.4.17 2010/10/29 16:21:38 yrocq Exp $
+
+/**
+ * @file
+ * Display a dynamic horizontal menu which degrades gracefully if Javascript is not present
+ */
+/**
+ * Implementation of hook_block
+ */
+function dynamic_persistent_menu_block($op= 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      $block[0]['info'] = t('Dynamic persistent menu');
+      $block[0]['cache'] = BLOCK_NO_CACHE;
+      return $block;
+      break;
+      
+    case 'view':
+      $params = explode(':',variable_get('dynamic_persistent_menu_menu_root', 'navigation:0'));
+      $block['content'] = theme('dynamic_persistent_menu', $params[0], $params[1], variable_get('dynamic_persistent_menu_sub_menu_timeout', 2000));
+      return $block;
+      break;
+      
+      case 'configure':
+        $options = menu_parent_options(menu_get_menus(), 0);
+        $form['dynamic_persistent_menu_menu_root'] = array(
+          '#type' => 'select',
+          '#title' => t('Menu root'),
+          '#default_value' => variable_get('dynamic_persistent_menu_menu_root', 'navigation:0'),
+          '#options' => $options,
+          '#description' => t('Choose the menu you wish to display in the block')
+        );
+        $form['dynamic_persistent_menu_sub_menu_timeout'] = array(
+            '#type' => 'textfield',
+            '#title' => t('Sub-menu timeout'),
+            '#default_value' => variable_get('dynamic_persistent_menu_sub_menu_timeout', 2000),
+            '#description' => t('Time before menu hiding when the mouse pointer leaves the parent menu (in milliseconds)')
+          );
+          
+          return $form;
+      
+      case 'save':
+        variable_set('dynamic_persistent_menu_menu_root', $edit['dynamic_persistent_menu_menu_root']);
+        variable_set('dynamic_persistent_menu_sub_menu_timeout', (int) $edit['dynamic_persistent_menu_sub_menu_timeout']);
+        break;
+  }
+}
+
+/**
+ * Implementation of hook_theme
+ */
+
+function dynamic_persistent_menu_theme() {
+  return array(
+    'dynamic_persistent_menu' => array(
+      'arguments' => array(
+          'menu' => NULL,
+          'parent' => NULL,
+          'timeout' => NULL
+        ),
+    ),
+    'dynamic_persistent_menu_menu_item' => array(
+        'arguments' => array(
+            'link' => NULL,
+            'extra_class' => NULL,
+            'id' => NULL
+          )
+      )
+  );
+}
+
+/**
+ * Theme functions
+ */
+
+function theme_dynamic_persistent_menu($menu_name, $mlid, $timeout) {
+  drupal_add_css(drupal_get_path('module', 'dynamic_persistent_menu') .'/dynamic-persistent-menu.css');
+  $item_class = "dynamic-persistent-menu-menu-item";
+  $sub_item_class = "dynamic-persistent-menu-sub-menu-item";
+  
+  // Find menu item in the menu tree
+
+  $menu_tree = dynamic_persistent_menu_tree_page_data($menu_name, $mlid);
+  $menu_link = menu_link_load($mlid);
+
+  // Don't display anything if the selected menu has no children
+
+  if (!$menu_tree) {
+    return;
+  }
+  
+  // Build the menus
+  
+  $output = '<ul class="dynamic-persistent-menu-menu">';
+
+  foreach($menu_tree as $menu_item) {
+    $link = $menu_item['link'];
+    if ($link['hidden'] == 0) {
+      if($link['has_children']) {
+        if ($link['in_active_trail']) {
+          $display = 'block';
+          $over_menu_default = $link['mlid'];
+        }
+        else {
+          $display = 'none';
+        }
+      }
+      
+      $output .= theme('dynamic_persistent_menu_menu_item', $link, 'dynamic-persistent-menu-menu-item', 'dynamic-persistent-menu-menu'.$link['mlid']);
+    
+      // Submenu
+      
+      if ($menu_item['link']['has_children'] && is_array($menu_item['below'])) {
+        $submenu_items ='';
+        foreach($menu_item['below'] as $submenu_item) {
+          $link2 = $submenu_item['link'];
+          if ($link2['hidden'] == 0) {
+
+            $submenu_items .= theme('dynamic_persistent_menu_menu_item', $link2, 'dynamic-persistent-menu-sub-menu-item', 'dynamic-persistent-menu-sub-menu-item'.$link2['mlid']);;
+          }
+        }
+        if ($submenu_items !='') {
+          $submenu .= '<ul class="block dynamic-persistent-menu-sub-menu" id="dynamic-persistent-menu-sub-menu'. $link['mlid'] .'" style="display:'. $display  .'">';
+          $submenu .= $submenu_items;
+          $submenu .= '</ul>';
+        }
+      }
+    }
+  }
+  $output .= '</ul>';
+  $output .= $submenu;
+    drupal_add_js("overMenuDefault = 'dynamic-persistent-menu-menu". $over_menu_default ."';", 'inline');
+    drupal_add_js("subMenuTimeout = $timeout;", 'inline');
+    drupal_add_js(drupal_get_path('module', 'dynamic_persistent_menu') .'/dynamic_persistent_menu.js');
+  
+  return $output;
+}
+
+/**
+* Generate the HTML output for a menu item and submenu item.
+*
+* @ingroup themeable
+*/
+function theme_dynamic_persistent_menu_menu_item($link, $extra_class = NULL, $id = NULL) {
+ if (!empty($extra_class)) {
+   $class .= ' '. $extra_class;
+ }
+ 
+ if ($link['in_active_trail']) {
+   $link['localized_options']['attributes']['class'] = 'active';
+ }
+ 
+
+ return '<li class="'. $class .'" id="'.$id.'">'. theme('menu_item_link', $link) ."</li>\n";
+}
+
+/**
+ * Get the data structure representing a named menu tree, based on the current page.
+ *
+ * The tree order is maintained by storing each parent in an individual
+ * field, see http://drupal.org/node/141866 for more.
+ *
+ * @param $menu_name
+ *   The named menu links to return
+ * @return
+ *   An array of menu links, in the order they should be rendered. The array
+ *   is a list of associative arrays -- these have two keys, link and below.
+ *   link is a menu item, ready for theming as a link. Below represents the
+ *   submenu below the link if there is one, and it is a subtree that has the
+ *   same structure described for the top-level array.
+ */
+function dynamic_persistent_menu_tree_page_data($menu_name, $mlid) {
+  static $tree = array();
+
+  // Load the menu item corresponding to the current page.
+  if ($item = menu_get_item()) {
+    // Generate a cache ID (cid) specific for this page.
+    // $cid = 'links:'. $menu_name .':page-cid:'. $item['href'] .':'. (int)$item['access'];
+
+    if (!isset($tree[$cid])) {
+      // If the static variable doesn't have the data, check {cache_menu}.
+      $cache = cache_get($cid, 'cache_menu');
+
+      // If the tree data was not in the cache, $data will be NULL.
+      if (!isset($data)) {
+        // Build and run the query, and build the tree.
+        if ($item['access']) {
+          // Check whether a menu link exists that corresponds to the current path.
+          $args = array($menu_name, $item['href']);
+          $placeholders = "'%s'";
+          if (drupal_is_front_page()) {
+            $args[] = '<front>';
+            $placeholders .= ", '%s'";
+          }
+          $parents = db_fetch_array(db_query("SELECT p1, p2, p3, p4, p5, p6, p7, p8 FROM {menu_links} WHERE menu_name = '%s' AND link_path IN (". $placeholders .")", $args));
+
+          if (empty($parents)) {
+            // If no link exists, we may be on a local task that's not in the links.
+            // TODO: Handle the case like a local task on a specific node in the menu.
+            $parents = db_fetch_array(db_query("SELECT p1, p2, p3, p4, p5, p6, p7, p8 FROM {menu_links} WHERE menu_name = '%s' AND link_path = '%s'", $menu_name, $item['tab_root']));
+          }
+          
+          // We always want all the top-level links with plid == 0.
+          $parents[] = '0';
+          // Use array_values() so that the indices are numeric for array_merge().
+          
+          $args = array($mlid);
+          
+          for ($i=0; $i < 2; $i++) {
+            $placeholders = implode(', ', array_fill(0, count($args), '%d'));
+            $result = db_query("SELECT * FROM {menu_links} WHERE plid in (". $placeholders .")", $args);
+            
+            while ($row = db_fetch_object($result)) {
+              $args[] = $row->mlid;
+            }
+          }
+
+          array_shift($args);
+          
+          $placeholders = implode(', ', array_fill(0, count($args), '%d'));
+          
+          array_unshift($args, $menu_name);
+        }
+        else {
+          // Show only the top-level menu items when access is denied.
+          $args = array($menu_name, '0');
+          $placeholders = '%d';
+          $parents = array();
+        }
+        
+        // Select the links from the table, and recursively build the tree. We
+        // LEFT JOIN since there is no match in {menu_router} for an external
+        // link.
+
+        $data['tree'] = menu_tree_data(db_query("
+          SELECT m.load_functions, m.to_arg_functions, m.access_callback, m.access_arguments, m.page_callback, m.page_arguments, m.title, m.title_callback, m.title_arguments, m.type, m.description, ml.*
+          FROM {menu_links} ml LEFT JOIN {menu_router} m ON m.path = ml.router_path
+          WHERE ml.menu_name = '%s' AND ml.mlid IN (". $placeholders .")
+          ORDER BY p1 ASC, p2 ASC, p3 ASC, p4 ASC, p5 ASC, p6 ASC, p7 ASC, p8 ASC, p9 ASC", $args), $parents);
+        $data['node_links'] = array();
+        menu_tree_collect_node_links($data['tree'], $data['node_links']);
+      }
+      // Check access for the current user to each item in the tree.
+      menu_tree_check_access($data['tree'], $data['node_links']);
+      $tree = $data['tree'];
+    }
+
+    return $tree;
+  }
+
+  return array();
+}

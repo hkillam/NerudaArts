@@ -1,0 +1,18 @@
+<?php
+/**
+ * Implementation of hook_uninstall
+ *
+ * @return void
+ **/
+function dynamic_persistent_menu_uninstall() {
+  variable_del('dynamic_persistent_menu_menu_root');
+  variable_del('dynamic_persistent_menu_sub_menu_timeout');
+}
+
+function dynamic_persistent_menu_update_6100() {
+  // dsm block shouldn't be put in cache
+  $ret = array();
+  $ret[] = update_sql("UPDATE {blocks} SET cache=-1 WHERE module='dynamic_persistent_menu'");
+  
+  return $ret;
+}
