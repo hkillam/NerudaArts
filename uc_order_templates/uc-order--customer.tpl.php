@@ -15,9 +15,15 @@
  *   should be displayed.
  *
  * @see template_preprocess_uc_order()
+ * customized for Neruda Arts
+ *    to add ticket types (attributes) in the invoice
+ *    to display price with attributes instead of list price
+ *    to change table colour
+ *    to note the guest list for tickets
  */
 ?>
-<table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" bgcolor="#006699" style="font-family: verdana, arial, helvetica; font-size: small;">
+
+<table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" bgcolor="#BA5431" style="font-family: verdana, arial, helvetica; font-size: small;">  
   <tr>
     <td>
       <table width="100%" border="0" cellspacing="0" cellpadding="5" align="center" bgcolor="#FFFFFF" style="font-family: verdana, arial, helvetica; font-size: small;">
@@ -55,6 +61,8 @@
             <p><b><?php print t('Username:'); ?></b> <?php print $order_new_username; ?><br />
             <b><?php print t('Password:'); ?></b> <?php print $order_new_password; ?></p>
             <?php endif; ?>
+			
+			<p><b><?php echo t('This email is your receipt.  Your email address will be on the guest list at the front door.  Enjoy the show!'); ?></b></p>
 
             <p><b><?php print t('Want to manage your order online?'); ?></b><br />
             <?php print t('If you need to check the status of your order, please visit our home page at !store_link and click on "My account" in the menu or login with the following link:', array('!store_link' => $store_link)); ?>
@@ -63,7 +71,7 @@
 
             <table cellpadding="4" cellspacing="0" border="0" width="100%" style="font-family: verdana, arial, helvetica; font-size: small;">
               <tr>
-                <td colspan="2" bgcolor="#006699" style="color: white;">
+                <td colspan="2" bgcolor="#BA5431" style="color: white;">
                   <b><?php print t('Purchasing Information:'); ?></b>
                 </td>
               </tr>
@@ -119,7 +127,7 @@
               </tr>
 
               <tr>
-                <td colspan="2" bgcolor="#006699" style="color: white;">
+                <td colspan="2" bgcolor="#BA5431" style="color: white;">
                   <b><?php print t('Order Summary:'); ?></b>
                 </td>
               </tr>
@@ -174,19 +182,32 @@
                       </td>
                     </tr>
 
-                    <?php foreach ($line_items as $item): ?>
-                    <?php if ($item['type'] == 'subtotal' || $item['type'] == 'total')  continue; ?>
+                    <?php
+                    $context = array(
+                      'revision' => 'themed',
+                      'type' => 'line_item',
+                      'subject' => array(
+                        'order' => $order,
+                      ),
+                    );
+                    foreach ($line_items as $item) {
+                    if ($item['line_item_id'] == 'subtotal' || $item['line_item_id'] == 'total') {
+                      continue;
+                    }?>
 
                     <tr>
                       <td nowrap="nowrap">
                         <?php print $item['title']; ?>:
                       </td>
                       <td>
-                        <?php print $item['formatted_amount']; ?>
+                        <?php
+                          $context['subject']['line_item'] = $item;
+                          print uc_price($item['amount'], $context);
+                        ?>
                       </td>
                     </tr>
 
-                    <?php endforeach; ?>
+                    <?php } ?>
 
                     <tr>
                       <td>&nbsp;</td>
@@ -208,19 +229,78 @@
 
                         <table width="100%" style="font-family: verdana, arial, helvetica; font-size: small;">
 
-                          <?php foreach ($products as $product): ?>
+                          <?php if (is_array($order->products)) {
+                            $context = array(
+                              'revision' => 'formatted',
+                              'type' => 'order_product',
+                              'subject' => array(
+                                'order' => $order,
+                              ),
+                            );
+                            foreach ($order->products as $product) {
+                              $price_info = array(
+                                'price' => $product->price,
+                                'qty' => $product->qty,
+                              );
+                              $context['subject']['order_product'] = $product;
+                              $context['subject']['node'] = node_load($product->nid);
+                              ?>
                           <tr>
                             <td valign="top" nowrap="nowrap">
                               <b><?php print $product->qty; ?> x </b>
                             </td>
                             <td width="98%">
-                              <b><?php print $product->title; ?> - <?php print $product->total_price; ?></b>
-                              <?php print $product->individual_price; ?><br />
-                              <?php print t('SKU'); ?>: <?php print $product->model; ?><br />
-                              <?php print $product->details; ?>
+                              <b><?php print $product->title .' - '. uc_price($price_info, $context); ?></b>
+                              <?php if ($product->qty > 1) {
+                                $price_info['qty'] = 1;
+                                print t('(!price each)', array('!price' => uc_price($price_info, $context)));
+                              } ?>
+                              <br />
+                              <?php if (isset($product->data['attributes']) && is_array($product->data['attributes']) && count($product->data['attributes']) > 0) {?>
+                              <?php foreach ($product->data['attributes'] as $attribute => $option) {
+                                print '<li>'. t('@attribute: @options', array('@attribute' => $attribute, '@options' => implode(', ', (array)$option))) .'</li>';
+                              } ?>
+                              <?php } ?>                              <?php 
+								$productnode = node_load($product->nid);
+								
+								$image_path = $productnode->field_image_cache[0]['filepath'];
+								?>
+								<div style="float:left";>
+								<?php
+								print theme('imagecache', 'product', $image_path, $productnode->title, '');	
+								?>
+								</div>
+								<?php
+								
+								// print "<pre>".print_r($product)."</pre>";
+								if ($product->shippable == 0) {
+								   print $productnode->body; 
+								   
+								  $view = views_get_view('uc_products');
+								  $view->set_display('block_3');
+								  $view->set_arguments(array($product->nid));
+								  // change the amount of items to show
+								  $view->set_items_per_page(4);
+								  $view->pre_execute();
+								  $view->execute();
+								  print $view->render();								   
+								}
+							  ?>
+							  <br />
+								
+								
+							  <?php 
+							  
+//							  drupal_set_message("<pre>".print_r($productnode)."</pre>");
+
+
+									?>
+
+                              <br />
                             </td>
                           </tr>
-                          <?php endforeach; ?>
+                          <?php }
+                              }?>
                         </table>
 
                       </td>
@@ -244,7 +324,7 @@
                   <?php if ($email_text): ?>
                   <p><?php print t('Please note: This e-mail message is an automated notification. Please do not reply to this message.'); ?></p>
 
-                  <p><?php print t('Thanks again for shopping with us.'); ?></p>
+                  <p><?php print t('Thanks again for shopping with Neruda Arts.'); ?></p>
                   <?php endif; ?>
 
                   <?php if ($store_footer): ?>
