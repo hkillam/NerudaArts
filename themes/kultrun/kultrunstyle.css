@@ -1,0 +1,1078 @@
+
+/* andres' favourite blue  #29b5d6 */
+
+
+body {
+   font-family: 'Open+Sans', Helvetica, Arial, sans-serif;
+   color: #fff;
+}
+
+/* remove padding from container, except on small screens */
+@media (min-width: 768px) {
+	.container {
+
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+	#menubar .container .row, 
+	#navbar .container .row {
+		margin-left: 0;
+		margin-right: 0;
+	}	
+	.navbar-collapse {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+	.container .col-md-12 {
+	  padding-left:  0;
+	  padding-right:  0;
+	}
+	.navbar .col-sm-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.navbar.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+}
+
+
+#mini-panel-kultrun_menu  .menu .leaf {
+    float: right;
+    list-style: none outside none;
+    margin-left: 40px;
+}
+
+#content #mini-panel-kultrun_menu ul li a {
+    color: #691067 !important;
+    text-decoration: none;
+}
+
+
+#content h2, #content h2, #content h2 a, #content h2 a, #footer h2, h2, h3 {
+  background-color: transparent;
+  color: #4f7f12 !important;
+}
+#content  .view-tracker .views-field-title a {
+    color: #691067;
+}
+#content  th a {
+    color: #691067;
+}
+/* links are blue */
+a,
+#content  ul li a
+ {
+    color: #3A9EF4;
+}
+#content #kultrun-page #block-block-9 a,
+#content #kultrun-home #block-block-9 a {
+    font-size: 1.5em;
+}
+
+/* kultrun colour header &  dates */
+#block-block-38 {
+  background: url("images/KultrunPageHeader.png") no-repeat scroll center top / 100% auto;
+	background-size: cover;
+	height: 158px;
+}
+/* logo block */
+#block-block-44 {
+  background-color: #000;
+}
+
+
+/* kultrun header logo */
+#block-block-44 > p {
+  text-align: center;
+}
+/* kultrun header neruda presents */
+#block-block-45 {
+  left: 10px;
+  position: absolute;
+  top: -16px;
+}
+#block-block-45 img {
+  height: auto;
+  width: 100px;
+}
+#block-block-45 > h2 {
+  color: #a93e36 !important;
+  font-size: 1em;
+}
+#block-nice-menus-1 {
+  background-color: #29b5d6;
+}
+
+
+.page-festivals-kultrun .title, 
+.page-festivals-kultrun .breadcrumb,
+.page-festivals-kultrun-artists .breadcrumb {
+    display: none;
+}
+
+.page-kultrun .view-tracker .views-row {
+	margin: 0 0 1em 0;
+}
+
+#content #kultrun-home .view-tracker p {
+    line-height: inherit;
+    margin: 0;
+    padding: 5px 0 0;
+}
+
+
+#content #kultrun-home .view-tracker .views-field-teaser {
+    border-bottom: 1px solid lightgray;
+}
+
+#content #kultrun-home .view-tracker .views-field-field-slideshow-image-fid {
+    float: left;
+    margin-right: 7px;
+}
+#content #kultrun-home .view-tracker .views-row {
+    clear: both;
+}
+
+
+
+.page-festivals-kultrun #content-inner,
+.page-festivals-kultrun-artists #content-inner {
+    border-top: medium none;
+}
+
+
+/* this one should mak things better for everyone */
+#ui-datepicker-div {
+    background-color: tan;
+    border: 2px solid gray;
+    padding: 7px;
+}
+#ui-datepicker-div .ui-datepicker-links div {
+    float: left;
+    margin-right: 20px;
+}
+
+#content .field.field-type-nodereference.field-field-venue h2 {
+    border-bottom: 0;
+}
+#content .field.field-type-nodereference.field-field-venue h2 a {
+    color: #333333;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+
+/* teaser view of artist is more compacted */
+
+#content .node-teaser.node-type-artist ul.links {
+    margin-left: 20px;
+}
+#content .node-teaser.node-type-artist p {
+    line-height: 1.5em;
+    margin-left: 200px;
+    max-height: 93px;
+    overflow: hidden;
+}
+#content .node-teaser.node-type-event p {
+    line-height: 1.5em;
+    max-height: 93px;
+    overflow: hidden;
+}
+.node-teaser.node-type-artist .field.field-type-text.field-field-whattheydo {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 200px;
+    padding-top: 5px;
+}
+.node-teaser.node-type-event .field.field-type-text.field-field-whattheydo {
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 5px;
+}
+#content .node-teaser.node-type-artist h2 {
+     border-bottom: 0 none;
+    margin-left: 200px;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+div.pane-content > div.node.node-teaser {
+    border-top: 1px solid #EEEEEE;
+}
+
+#content .node-teaser.node-type-event h2 {
+    border-bottom: 0 none;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.node-teaser.node-type-artist .field-field-photo {
+    float: left;
+}
+.node-teaser.node-type-event .field-field-poster {
+    float: right;
+}
+.node-teaser.node-type-artist .content * {
+    display:none;
+}
+
+.node-teaser.node-type-artist .content :nth-child(1),
+.node-teaser.node-type-artist .content :nth-child(2),
+.node-teaser.node-type-artist .content :nth-child(3) {
+   display:block;
+}
+
+.node-teaser.node-type-artist .content :nth-child(1) strong,
+.node-teaser.node-type-artist .content :nth-child(2) strong,
+.node-teaser.node-type-artist .content :nth-child(3) strong {
+   display:inline;
+}
+
+/* vertical tabs is tripping on some other setting deep down, and i can't find it.  this works */
+
+.vertical-tabs-panes {
+    position: absolute;
+    width: 383px;
+    background-color: white;
+}
+
+
+/* in ubercart, tickets do not display price - need to select type */
+.page-catalog-neruda-store-tickets .uc-price {
+    display: none;
+    white-space: nowrap;
+}
+.page-catalog-neruda-store-tickets form {
+    display: none;
+}
+table.category-products thead *:nth-child(3) {
+    display: none;
+}
+table.category-products thead *:nth-child(4) {
+    display: none;
+}
+
+/* tickets embedded in event nodes */
+.pane-content-field.pane-field-cost {
+    background-color: #ECE5DF;
+}
+
+.node-type-event .node-teaser.node-type-product {
+    background-color: #ECE5DF;
+    margin-bottom: 15px;
+    padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.node-type-event .field-field-eventdate {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+.node-type-event .maplink {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.inside.panels-flexible-region-inside.panels-flexible-region-11-center-inside.panels-flexible-region-inside-first {
+    text-align: center;
+}
+#content .node-teaser.node-type-product h2 {
+    border-bottom: medium none;
+    font-size: 1.2em;
+}
+.node-teaser.node-type-product .uc-price {
+    display: none;
+    white-space: nowrap;
+}
+.node-teaser.node-type-product  ul.links {
+    display: none;
+}
+.field-field-tickets .node-type-product .product-image,
+.field-field-tickets .node-type-product .product-body {
+    display: none;
+}
+.field-field-tickets .node-teaser.node-type-product {
+
+    width: 100%;
+}
+
+.field-field-tickets .node-teaser #edit-qty-wrapper > label {
+    display: inline;
+}
+.field-field-tickets .node-teaser .attributes label {
+    display: none;
+}
+
+.field-field-tickets .node-teaser .attributes .form-item .form-radios label {
+    display: block;
+}
+.field-field-tickets .node-teaser #edit-qty-wrapper {
+    float: left;
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+/* festival schedule - make headers bigger */
+.view-Festival-Schedule thead {
+    font-size: 1.2em;
+}
+
+.field.field-type-nodereference.field-field-artist {
+    clear: both;
+}
+
+/*Body Styles*/
+
+body    {
+	background-color: #000;
+}
+
+body.not-logged-in {
+	padding: 0;
+}
+
+
+
+#header {
+   /* background: url("images/kultrunheader.jpg") no-repeat scroll center top / 100% auto rgba(0, 0, 0, 0); */
+    height: 168px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 9px 0px;
+	position: relative; 
+	background-image: url("images/translucentwhite.png");
+}
+
+
+#logo img {
+    height: 150px;
+    width: 319px;
+    left: 50%;
+    margin: 0 0 0 -159px;
+    position: absolute;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* Navigation */
+
+
+#navigation img {
+    
+       height: 48px;
+	   float: left;
+	margin-left: 30px;
+}
+
+#nice-menu-1 {
+  display: table;
+  float: none;
+  margin: 0 auto;
+  width: auto;
+}
+
+#nice-menu-1 li {
+    background: none;
+}
+
+#navigation {
+    background-color: #99CB4F !important;
+    border: 0 none;
+    height: 61px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    padding-left: 15px;
+    padding-top: 12px;
+    width: 100%;
+}
+
+#nice-menu-1 a {
+  border: 0 none;
+  padding: 13px 20px 0;
+  width: auto;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.green-bar {
+  background-color: #8cae3e;
+  font-size: 1.2em;
+  padding-right: 30px;
+  padding-top: 10px;
+  text-align: right;
+}
+.blue-row {
+  background-color: #00adef;
+  padding: 0 !important;
+}
+.blue-row .panels-flexible-region-inside {
+  padding-right: 0;
+}
+.blue-row p {
+  color:  #fff;
+}
+
+.pane-content img {
+  height: auto;
+  max-width: 100%;
+}
+
+.panels-flexible-region-32-poster {
+  float: left;
+  width: 100%;
+}
+
+
+/* top colour bar */
+#block-block-49 img {
+  border-bottom: 3px solid #ec008c;
+  width: 100%;
+}
+
+/* kultrun logo */
+#block-block-44 img {
+  padding-bottom: 18px;
+  padding-top: 10px;
+}
+
+.neruda_presents {
+  left: 6%;
+  position: absolute;
+}
+
+/* home page on blue background needs white title */
+.page-kultrun h2 {
+  color: #fff !important;
+}
+
+ul.nice-menu-down li {
+  border: medium none;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar.container {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.node-type-artist .field-field-whattheydo,
+.node-type-event .field-field-whattheydo {
+       padding: 1em 1em 1.25em;
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+    background-color: #FFA561;	
+	font-weight: bold;
+}
+
+/* remove the padding under the kultrun in the kultrun submenu */
+#content .pane-block pane-menu-menu-kultrun p {
+    padding: 0;
+}
+
+/* in the calendar view of a single day, float the images left */
+.calendar .dayview .view-data-node-node-data-field-artist-node-data-field-photo-field-photo-fid {
+    float: left;
+}
+
+
+/* add to calendar needs icons */
+.addthisevent_dropdown  span {
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+
+.addthisevent_dropdown .ateoutlook {
+    background: url("images/outlookicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+	}
+.addthisevent_dropdown .ateoutlook:hover {
+    background: url("images/outlookicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+.addthisevent_dropdown .ategoogle {
+    background: url("images/googleicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .ategoogle:hover {
+    background: url("images/googleicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+	
+.addthisevent_dropdown .ateyahoo {
+    background: url("images/yahoocal.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .ateyahoo:hover {
+    background: url("images/yahoocal.png") no-repeat scroll 0 0 #F7F5C4;
+}
+
+.addthisevent_dropdown .ateical {
+    background: url("images/ical.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+
+.addthisevent_dropdown .ateical:hover {
+    background: url("images/ical.png") no-repeat scroll 0 0 #F7F5C4;
+}
+.addthisevent_dropdown .atehotmail {
+    background: url("images/hotmailicon.png") no-repeat scroll 0 0 white;
+    margin-left: 10px;
+    padding-left: 30px;
+    width: 150px;
+}
+.addthisevent_dropdown .atehotmail:hover {
+    background: url("images/hotmailicon.png") no-repeat scroll 0 0 #F7F5C4;
+}
+
+
+#atedrop1.addthisevent-drop {
+    color: #960000 !important;
+}
+
+.page-festivals-kultrun-workshops .panel-pane.pane-node {
+    margin-bottom: 30px;
+}
+
+.page-festivals-kultrun-events  #node-425 .field.field-type-text.field-field-whattheydo,
+.page-festivals-kultrun-events  #node-421 .field.field-type-text.field-field-whattheydo,
+.page-festivals-kultrun-events  #node-424 .field.field-type-text.field-field-whattheydo
+ {
+    clear: both;
+}
+
+
+#webform-component-civicrm-1-contact-1-cg4-custom-20 .form-checkboxes .form-item {
+    float: left;
+    margin: 0;
+    width: 177px;
+}
+
+
+#webform-component-civicrm-1-contact-1-email-email {
+    clear: both;
+    padding-top: 12px;
+}
+
+#webform-component-civicrm-1-contact-1-cg4-custom-13, 
+#webform-component-civicrm-1-contact-1-cg4-custom-15,
+#webform-component-civicrm-1-contact-1-cg4-custom-12,
+#webform-component-civicrm-1-contact-1-cg4-custom-16,
+#webform-component-civicrm-1-contact-1-cg4-custom-18 {
+    float: left;
+    width: 275px;
+}
+#webform-component-civicrm-1-contact-1-cg4-custom-15 {
+        padding: 0;
+}
+
+
+
+#webform-component-civicrm-1-contact-1-cg4-custom-15 .form-item,
+#webform-component-civicrm-1-contact-1-cg4-custom-16 .form-item,
+#webform-component-civicrm-1-contact-1-cg4-custom-18 .form-item {
+    margin: 0;
+}
+#webform-client-form-449 .form-checkboxes .form-item, 
+#webform-client-form-449 .form-radios .form-item {
+    margin: 0;
+}
+
+#edit-submitted-civicrm-1-contact-1-cg4-custom-17 {
+    height: 43px;
+    width: 561px;
+}
+#webform-component-civicrm-1-contact-1-cg4-custom-17,
+#webform-component-civicrm-1-contact-1-cg4-custom-20 {
+    clear: both;
+}
+
+#block-block-22 {
+    display: inline-block;
+
+	position: relative;
+	z-index: 1;
+    padding-top: 0;	
+}
+
+#content-inner {
+    border-top: 0;
+	background-color: white;
+}
+
+#content h1 {
+    display: none;
+}
+#header-blocks {
+    font-color: #FECB00;
+    float: right;
+
+    margin-left: 0;
+    margin-right: 38px;
+
+}
+#header-blocks a, 
+#header-blocks a:visited {
+    color: #FECB00;
+    text-decoration: none;
+}
+#tryptych, #quadrant, #footer {
+    z-index: -1;
+}
+
+#content-area {
+    margin-top: 1em;
+    z-index: 10;
+}
+
+.cke_skin_kama {
+    background: white;
+}
+
+/* hide neruda page stuff on kultrun pages */
+#navbar-inner {
+
+    display: none;
+
+}
+
+div#site-name {
+    display: none;
+}
+#kultrun-home {
+    position: relative;
+}
+.page-festivals-kultrun .pane-block-7, 
+.page-festivals-kultrun  .pane-block-9, 
+.page-festivals-kultrun  .pane-block-8, 
+.page-festivals-kultrun  .pane-block-14, 
+.page-festivals-kultrun .pane-block-22 {
+    color: #F0F6FA;
+    left: 725px;
+    position: absolute;
+	top: 0;
+}
+.page-festivals-kultrun  .pane-block-9 {
+    font-size: 1.4em;
+    top: 30px;	
+}
+
+.panel-pane.pane-block.pane-block-8 {
+    top: 61px;
+}
+.panel-pane.pane-block.pane-block-14 {
+    top: 85px;
+}
+.panel-pane.pane-block.pane-block-22 {
+    left: 708px;
+    top: 113px;
+    width: 200px;
+}
+#kultrun-home .pane-block-9 a,
+#kultrun-page .pane-block-9 a,
+#kultrun-home .pane-block-8 a,
+#kultrun-page .pane-block-8 a,
+#kultrun-home .pane-block-14 a,
+#kultrun-page .pane-block-14 a {
+    color: #F7F5C4;
+}
+
+
+.view-uc-orders table caption {
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+.view-uc-orders table {
+    width: 100%;
+}
+.view-uc-orders .view-header {
+    display: none;
+}
+
+#block-block-14 {
+    z-index: 100;
+}
+#block-block-22 p {
+    margin: 0;
+    padding: 0;
+}
+
+.page-kultrun .panels-flexible-row-32-1 {
+  background-color: #29b5d6;
+}
+
+
+/* kultrun survey 2013 */
+#node-466 {
+    background: none repeat scroll 0 0 #FEF3D0;
+    padding: 15px;
+}
+
+
+#node-466 #edit-submitted-civicrm-1-contact-1-cg5-custom-24-wrapper > label,
+#node-466 #edit-submitted-civicrm-1-contact-1-cg5-custom-25-wrapper > label,
+#node-466 #webform-component-civicrm-1-contact-1-contact-gender-id label,
+#node-466 #edit-submitted-civicrm-1-contact-1-cg5-custom-27-wrapper > label,
+#node-466 #edit-submitted-civicrm-1-contact-1-email-email-wrapper > label,
+#node-466 #edit-submitted-civicrm-1-contact-1-address-postal-code-wrapper > label,
+#node-466 #edit-submitted-civicrm-1-contact-1-cg6-custom-31-wrapper > label {
+    display: inline;
+}
+
+#node-466 #edit-submitted-civicrm-1-contact-1-cg6-custom-28 {
+    height: 40px;
+    width: 400px;
+}
+
+
+#node-466  .form-checkboxes {
+    max-width: 600px;
+	margin-top: 0;
+}
+
+#node-466  .form-checkboxes .form-item {
+    display: inline-block;
+    position: static;
+    width: 183px;
+}
+
+#webform-component-civicrm-1-contact-1-cg5-custom-26 .form-item, 
+#webform-component-civicrm-1-contact-1-cg5-custom-26 .form-item .form-checkboxes {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.webform-component.webform-component-textfield.webform-container-inline {
+    margin-bottom: 15px;
+}
+
+
+#edit-submitted-civicrm-1-contact-1-cg5-custom-27-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+}
+#edit-submitted-civicrm-1-contact-1-cg5-custom-27-wrapper > label {
+    font-weight: normal;
+}
+
+
+#webform-component-civicrm-1-contact-1-cg6-custom-31 {
+    left: 281px;
+    position: absolute;
+    top: 678px;
+}
+
+#edit-submitted-civicrm-1-contact-1-cg6-custom-31-wrapper > label {
+    font-weight: normal;
+}
+
+#autocomplete {
+   border: 1px solid black;
+}
+
+#autocomplete  ul {
+    list-style: none outside none;
+}
+
+/* ***************************************************************** */
+/* Nick's Tweaks around KULTRUN - temp to bridge to post KULTRUN 2013*/
+
+ .node-type-panel #content-inner {
+	background:none;
+}
+
+.node-form {
+	background: #fff;
+}
+
+#sponsors-inner {
+	padding: 0px 10px;
+}
+
+#sponsors-inner h2 {
+	border-top: #666 solid 1px;
+	background: #ffcc33;
+}
+
+#content-bottom img {
+    max-width: 100%;
+}
+
+
+
+.node-type-news article .content, #content {
+   background-image: url("images/translucentwhite.png");
+   padding: 15px;
+}
+
+
+
+ .panel-pane.pane-views.pane-festival-schedule {
+    clear: both;
+}
+
+#block-block-38 .content > h2 {
+    color: black;
+    font-weight: bold;
+}
+
+
+/* action links */
+#block-block-41 {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.footer {
+  border: medium none;
+  margin-top: 0;
+}
+
+/*footer {
+  background-color: #1a3856;
+  color: #fff;
+} */
+footer {
+  background-color: transparent;
+  color: #fff;
+}
+.footer h2 {
+  color: #96c047 !important;
+  font-size: 1.3em;
+}
+
+header {
+  position: relative;
+}
+
+td.active {
+  background-color: #000 !important;
+}
+th.active {
+  background: #000 none repeat scroll 0 0 !important;
+}
+.views-table.table {
+  border: 1px solid white;
+}
+.page-header {
+  border: medium none;
+}
+th {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.active > img {
+  display:  none;
+}
+.page-kultrun-schedule .view-content table:nth-child(1) caption {
+  background-color: #29b5d6;
+  color: #000;
+  font-size: 1.3em;
+}
+
+.page-kultrun-schedule .view-content table:nth-child(2) caption {
+  background-color: #ffff00;
+  color: #000;
+  font-size: 1.3em;
+}
+.page-kultrun-schedule .view-content table:nth-child(3) caption,
+.page-kultrun-schedule .view-content table:nth-child(4) caption {
+  background-color: #ff0000;
+  color: #000;
+  font-size: 1.3em;
+}
+
+.page-kultrun .field-name-field-artist, 
+.page-kultrun .field-name-field-eventdate,
+.page-kultrun .field-name-field-venuecivi,
+.page-kultrun .field-name-field-cost  {
+   display: none;
+}
+
+.page-kultrun .field-name-body a {
+  color: #fff;
+}
+
+.page-kultrun-vendors .views-field-php a {
+  padding-right:  10px;
+}
+
+.page-kultrun-vendors .views-field-php br {
+  display: none;
+}
+
+.page-kultrun-vendors .views-field-php {
+  width: 86px;
+}
+.page-kultrun-vendors .views-table tr {
+  height: 52px;
+}
+
+/* the grid on artists and events pages */
+.browngrid {
+  background-color: #000;
+}
+
+/* some grids are blue */
+.browngrid.views-row-2,
+.browngrid.views-row-4,
+.browngrid.views-row-10,
+.browngrid.views-row-12,
+.browngrid.views-row-18,
+.browngrid.views-row-20,
+.browngrid.views-row-26,
+.browngrid.views-row-28,
+.browngrid.views-row-34,
+.browngrid.views-row-36,
+.browngrid.views-row-42,
+.browngrid.views-row-44,
+.browngrid.views-row-50,
+.browngrid.views-row-52,
+.browngrid.views-row-58,
+.browngrid.views-row-60 {
+  background-color: #29b5d6;
+}
+
+/* some grids are a very manly pink */
+.browngrid.views-row-5,
+.browngrid.views-row-7,
+.browngrid.views-row-13,
+.browngrid.views-row-15,
+.browngrid.views-row-21,
+.browngrid.views-row-23,
+.browngrid.views-row-29,
+.browngrid.views-row-31,
+.browngrid.views-row-37,
+.browngrid.views-row-39,
+.browngrid.views-row-45,
+.browngrid.views-row-47 {
+  background-color: #EF54C7;
+}
+
+.view-event-list.view-display-id-page_3 a {
+  color: #fff;
+}
+
+
+.browngrid h2, .browngrid .views-field-title {
+  height: 72px;
+}
+.browngrid .views-field-title-1 {
+  height: 51px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+}
+.browngrid .views-field-title h3 {
+  background-color: transparent;
+}
+.browngrid .views-field-field-whattheydo {
+  height: 52px;
+}
+
+.browngrid h2, 
+.browngrid .views-field-field-whattheydo,
+.browngrid .views-field-field-eventdate,
+.browngrid .views-field-field-venuecivi {
+  background-color: transparent;
+  color: white;
+  margin-top: 0;
+  padding: 5px;
+  text-align: left;
+}
+.browngrid a:hover {
+   color: #fff;
+}
+
+.views-row.browngrid {
+  padding: 0;
+}
+
+
+.view img {
+  height: auto;
+  max-width: 100%;
+}
+
+.newsletter_link {
+  background-color: #fff;
+  border: 1px solid white;
+  border-radius: 15px;
+  color: #000 !important;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+
+/* newsletter link */
+#block-block-50 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.view-vendors .view-footer a {
+  background-color: #3a9ef4;
+  border: 1px solid #3a9ef4;
+  border-radius: 21px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 20px;
+}
+
+.view-vendors .view-footer {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* logo image - contain yourself */
+#block-block-44 img {
+    max-width: 80%;
+}
+
+@media (max-width:400px) {
+   .view-festival-schedule .view-content table:nth-child(1) .views-field-php,
+   .view-festival-schedule .view-content table:nth-child(2) .views-field-php,
+   .view-festival-schedule .view-content table:nth-child(3) .views-field-organization-name,
+   .view-festival-schedule .view-content table:nth-child(4) .views-field-organization-name   {
+		display: none;
+	}
+		
+	.col-sm-12 {
+	  padding-left: 2px;
+	  padding-right: 2px;
+	}	
+
+}

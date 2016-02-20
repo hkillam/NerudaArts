@@ -1,0 +1,33 @@
+; $Id: STARTERKIT.info.txt,v 1.1.2.3 2009/05/08 15:05:04 johnalbin Exp $
+
+
+  ; The name and description of the theme used on the admin/build/themes page.
+name        = Kultrun
+description = Kultrun is Neruda Productions' custom theme created for the festival sub-site. 
+screenshot = screenshot.png
+
+core       = 7.x
+base theme = bootstrap
+
+
+stylesheets[all][]   = kultrunstyle.css
+
+
+
+  ; Optionally add some jquery scripts to your theme.
+; scripts[] = script.js
+
+
+
+regions[header] = Top Bar
+regions[navigation] = Navigation
+regions[jumbotron] = Jumbotron
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Primary
+regions[sidebar_second] = Secondary
+regions[footer1] = Footer Left
+regions[footer2] = Footer Center
+regions[footer3] = Footer Right
+
