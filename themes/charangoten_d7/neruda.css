@@ -1,0 +1,767 @@
+/* this is the way we paint our theme, paint our theme, paint our theme */
+
+body {
+    /*background: url("images/SiteTempBG4.jpg") no-repeat scroll center top rgba(0, 0, 0, 0);*/
+    margin: 0;
+    padding: 10px;
+}
+body {
+    background-color: #ffffff !important;
+    background-image: url("/sites/all/themes/charangoten_d7/images/logo-background.png");
+    background-position: -303px 10%;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: #FFFFFF !important;
+	
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+    font-family: Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
+	color: black;
+}
+
+p {
+    color: black;
+}
+
+  ul.links /* List of links */
+  {
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  ul.links.inline
+  {
+    margin: 0;
+    display: inline;
+  }
+
+  ul.links li
+  {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+  }
+
+  .marker /* "New" or "Updated" marker for content that is new or updated for the current user */
+  {
+    color: #c00;
+  }
+
+   .new /* "New" marker for comments that are new for the current user */
+  {
+    color: #c00;
+  }
+  
+  li a.active /* The active item in a Drupal menu */
+  {
+    color: #333;
+  }
+
+  a, a:visited {
+    color: #981B1E;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #981B1E;
+    text-decoration: none;
+}
+
+  .form-item input.error, /* Highlight the form elements that caused a form submission error */
+  .form-item textarea.error,
+  .form-item select.error
+  {
+    border: 2px solid #c00;
+  }  
+
+#header, #sidebar-first, #sidebar-second {
+    background: none;
+}
+
+#content h1 {
+    color: #960000;
+    font: bold 24px/150% Helvetica,Arial,Verdana,Sans-Serif;
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+
+#content h2 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #981B1E;
+    font: bold 22px/120% Helvetica,Arial,Verdana,Sans-Serif;
+    margin: 0 0 8px;
+}
+
+#content h2 a {
+    color: #981B1E;
+    text-decoration: none;
+}
+
+
+#sidebar-left h2, #sidebar-second h2 {
+    color: #960000;
+    font: bold 18px Helvetica,Arial,Verdana,Sans-Serif;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+
+#footer h2 {
+    color: #960000;
+    font: bold 18px Helvetica,Arial,Verdana,Sans-Serif;
+    text-transform: uppercase;
+}
+
+
+#footer ul {
+    list-style: none outside none;
+    padding: 0;
+}
+
+
+#main {
+    padding-bottom: 12px;
+	margin-top: 20px;
+	/*background: url("images/content_bg_90.png") repeat-y scroll center top rgba(0, 0, 0, 0);*/
+}
+
+.quadrant-left-inner, .quadrant-centre-left-inner, .quadrant-centre-right-inner, .quadrant-right-inner {
+    padding: 15px;
+}
+
+#quadrant-left {
+    margin-left: 0;
+}
+#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+    border-top: 1px solid #666666;
+}
+#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    padding: 0;
+    width: 22%;
+}
+
+#quadrant-right {
+    margin-right: 0;
+}
+#footer-inner {
+    clear: both;
+    margin: 10px 10px 20px;
+    padding-top: 0;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+#footer .content {
+    margin-left: 0;
+}
+
+#block-nice_menus-2 {
+    float: left;
+    height: 3.6em;
+    margin-left: 0;
+    margin-right: -100%;
+    padding: 0;
+    width: 100%;
+	height: 65px;
+	z-index: 200;
+}
+
+#block-nice_menus-2 {
+    border: thin solid #999999;
+    clear: both;
+}
+
+#block-nice_menus-2 .block-inner {
+    background: url("images/primarylinks_bg_subnav3.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    clear: both;
+    height: 65px;
+    margin: 0;
+    padding: 8px 0 0;
+}
+
+
+.nice-menu-main-menu li {
+    display: inline;
+    height: 40px;
+    margin: 0;
+    padding: 11px 15px 10px;
+}
+
+
+.nice-menu-main-menu:first-child a {
+    margin-left: 0;
+}
+.nice-menu-main-menu li a {
+    font-size: 1.4em;
+    height: 40px;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+#block-nice_menus-2 .block-inner {
+    background: url("images/primarylinks_bg_subnav3.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    clear: both;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+	border-right: thin solid #999999;
+}
+#block-nice_menus-2 {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+#block-nice_menus-2 ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#block-nice_menus-2 .menuparent ul {
+    margin: 15px 0 0;
+    padding: 0;
+    text-align: left;
+}
+ul.nice-menu .menuparent li {
+    background-color: #eeeeee;
+}
+
+ul.nice-menu  {
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+
+ul.nice-menu li {
+    padding-left: 15px;
+}
+
+#navigation {
+    background-color: transparent !important;
+    padding: 0;
+	clear: both;
+}
+
+ul.nice-menu a {
+    color: #981B1E;
+    display: block;
+    padding: 0;
+}
+
+ul.nice-menu-down li {
+    border: none;
+}
+
+
+div#block-nice_menus-2 div.content {
+    height: 57px;
+}
+
+
+ul.nice-menu-down .menuparent a {
+    padding-right: 5px;
+}
+
+ul.nice-menu li, ul.nice-menu li.menuparent {
+   background-color: transparent;
+}
+
+#header {
+    position: relative;
+    padding: 18px 0;
+}
+
+
+#header-region {
+    clear: right;
+    float: right;
+    width: 140px;
+}
+
+/* add to calendar block, in header */
+#block-block-22 {
+    display: inline-block;
+    left: -0;
+    padding-left: 15px;
+    padding-top: 0;
+    position: relative;
+    top: 4px;
+    z-index: 1;
+}
+
+/* buy tickets, in header */
+#block-block-9 a {
+    font-size: 1.5em;
+}
+
+#header-region p {
+    margin: 5px;
+}
+
+#block-block-22 p {
+    margin: 0;
+    padding: 0;
+}
+
+#block-block-7 {
+    left: -30px;
+    width: 171px;
+}
+
+.region-sidebar-second {
+    /*border-top: thin solid #666666;*/
+}
+
+.one-sidebar.sidebar-second #content {
+    margin-left: 1.8%;
+    width: 62%;
+}
+
+
+#sidebar-second {
+    margin-left: 4%;
+    margin-right: 0;
+    width: 27%;
+}
+
+
+#sidebar-second ul, #sidebar-second li, #sidebar-second ul li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+
+#sidebar-second #block-views-tracker-block_1 a {
+    border-top: thin solid #DDDDDD;
+}
+#sidebar-second ul li a {
+    color: #981B1E;
+    display: block;
+    font: 13px Helvetica,Arial,Verdana,Sans-Serif;
+    padding: 5px 0;
+    text-decoration: none;
+}
+#sidebar-second div.block {
+    border-bottom: 1px dashed #666666;
+    padding-bottom: 5px;
+}
+
+
+.one-sidebar.sidebar-second #content {
+    margin-left: 1.9%;
+}
+
+.view-tracker .views-row {
+    margin: 3em 0 0;
+    padding: 1em 0 0;
+}
+
+/* event page */
+
+
+.panels-flexible-27 .panels-flexible-region.panels-flexible-region-27-ticket {
+    padding: 7px;
+}
+
+.panels-flexible-region-27-ticket  {
+    background-color: #ECE5DF;
+	margin-bottom: 15px;
+}
+
+.node-teaser.node-type-product .uc-price {
+    display: none;
+    white-space: nowrap;
+}
+
+#content .field-name-field-tickets .node-teaser  h2 {
+    border-bottom: medium none;
+    font-size: 1.2em;
+}
+
+.node-teaser .add-to-cart label {
+    display: inline;
+}
+
+/* add to cart form on the event page */
+.node-teaser .add-to-cart .form-item {
+    float: left;
+}
+
+/* add to cart form on the event page */
+.node-teaser .add-to-cart .form-actions {
+    float: left;
+    margin-bottom: 1em;
+    margin-left: 7px;
+    margin-top: 1em;
+}
+
+.node-teaser .links {
+   display: none;
+}
+
+div.content div.field-name-field-eventdate, 
+div.field-field-location, 
+div.field-name-field-cost, 
+.node-product.node-teaser .node-add-to-cart.form-submit  {
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.panels-flexible-region-27-center .panel-separator {
+    height: 20px;
+}
+
+.addtocal {
+    margin-top: 3px;
+}
+
+.node-product.node-teaser .node-add-to-cart.form-submit {
+   padding: 5px;
+   border-radius: 4px;
+}
+
+.pane-node-field-venuecivi {
+   text-align: center;
+}
+
+#content .node-teaser.node-artist h2 {
+    border-bottom: 0 none;
+    font-size: 18px;
+    margin-left: 200px;
+    margin-top: 25px;
+}
+
+
+.node-teaser.node-artist .links {
+    display: inline;
+}
+
+.node-teaser.node-artist .field-name-field-whattheydo  {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 200px;
+    padding-top: 5px;
+}
+
+/* artist node */
+
+.node-type-artist .field-name-field-whattheydo, 
+.pane-node-field-whattheydo
+{
+    background-color: #FFA561;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em 1em 1.25em;
+    text-align: center;
+}
+
+.field-name-field-poster img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* calendar */
+.dayview .views-field-field-poster {
+    float: left;
+}
+
+
+#block-block-30 .content a {
+    float: right;
+}
+
+#edit-checkout--2, 
+#uc-cart-checkout-form #edit-continue,
+#uc-paypal-wps-form #edit-submit {
+    color: #660000;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.cke_editable {
+    background-image: none;
+    cursor: text;
+}
+
+/* contact info at bottom of artist page - add icons, remove labels */
+.view.view-CiviContacts.view-display-id-block_2 {
+    background-color: #F3F1BE;
+}
+.view.view-CiviContacts.view-display-id-block_3 {
+    /* neruda staff only */
+    background-color: #F3F1BE;
+}
+.view-CiviContacts ul {
+    list-style: none outside none;
+    padding: 0;
+}
+.view-CiviContacts li {
+    line-height: 23px;
+}
+.field-content.YouTube {
+    background: url("images/icono_youtube_mini2.png") no-repeat scroll left top rgba(0, 0, 0, 0);   
+	padding-left: 25px;
+}
+.field-content.YouTube i {
+   display: none;
+}
+.field-content.Facebook {
+    background: url("images/icon_facebook_tiny.png") no-repeat scroll left top rgba(0, 0, 0, 0);   
+	padding-left: 25px;
+}
+.field-content.Facebook i {
+   display: none;
+}
+.field-content.Website {
+    background: url("images/icon_link_mini.png") no-repeat scroll left top rgba(0, 0, 0, 0);   
+	padding-left: 25px;
+}
+.field-content.Website i {
+   display: none;
+}
+.field-content.civilink {
+    background: url("images/icon_civi_mini.png") no-repeat scroll left top rgba(0, 0, 0, 0);   
+	padding-left: 25px;
+}
+.views-field-email {
+    background: url("images/icon_email_mini.png") no-repeat scroll left top rgba(0, 0, 0, 0);   
+	padding-left: 25px;
+}
+
+
+/* slideshow.  want cycle2, but running with cycle */
+
+#block-views-slide-show-block_1 {
+	margin-left: 7px;
+}
+
+.view-slide-show.view-display-id-block .views-field-title {
+    color: #FFFFFF;
+    font-size: 2em;
+    left: 0.4em;
+    position: absolute;
+    text-shadow: 1px 1px 1px #000000, 3px 3px 3px #808080;
+    top: 0.5em;
+}
+
+.view-slide-show.view-display-id-block a:link, 
+.view-slide-show.view-display-id-block a:visited {
+    color: white;
+}
+
+
+.view-slide-show .views-field-field-eventdate {
+    color: #FFFFFF;
+    font-size: 1.4em;
+    left: 0.4em;
+    position: absolute;
+    top: 2.5em;
+	text-shadow: 1px 1px 1px #000000, 3px 3px 3px #808080;
+}
+
+
+
+/* more space, less distraction when filling out forms */
+.page-node-webform #sidebar-second, 
+.node-type-webform #sidebar-second  {
+    display: none;
+}
+
+.page-node-webform.one-sidebar.sidebar-second  #content,
+.node-type-webform.one-sidebar.sidebar-second   #content {
+    width: 100%;
+	background: white;
+}
+
+#edit-click_to_print-draggable-wrapper {
+    position: fixed;
+}
+
+
+ #edit-click_to_print-draggable-wrapper {
+    left: 0;
+    top: 10px;
+}
+
+.page-user #sidebar-second,
+.page-latinfest2013map   #sidebar-second {
+    display: none;
+}
+.page-user.one-sidebar.sidebar-second #content,
+.page-latinfest2013map.one-sidebar.sidebar-second    #content {
+    width: 100%;
+}
+
+.view-id-CiviContacts.view-display-id-block_4 {
+       background-image: url("images/translucentwhite.png");
+}
+
+
+.form-actions .form-submit {
+    color: #981B1E;
+    padding: 7px;
+	font-style: bold;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+#media-browser-tabset ul.tabs.primary li a:link {
+    font-weight: bold;
+    margin-right: 0;
+}
+#branding, #branding a:link, #branding a:visited {
+    color: #8B0000;
+    font-size: 1.3em;
+    text-shadow: 0 1px 3px #FAFF36;
+}
+
+#media-browser-tabset ul.tabs.primary li a:link {
+    font-weight: bold;
+    margin-right: 0;
+}
+#branding, #branding a:link, #branding a:visited {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    text-shadow: 0 1px 3px #FAFF36;
+}
+#branding, #branding a:link, #branding a:visited {
+    line-height: 100px;
+}
+
+#branding .ui-tabs .ui-tabs-nav li {
+	margin: 0;
+}
+
+#header {
+	/*width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0; 
+	right: 0;
+	z-index: 100;
+	margin: 0px auto 1em auto;*/
+	height: 150px;
+	width: 100%;
+	margin: 10px auto;
+	position: relative;
+}
+
+#header img {
+	float:none;
+}
+
+a#logo {
+	/*margin: 18px auto 18px auto;*/
+	/*display: block;
+	width:100%
+	max-width: 150px;
+	max-height: 135px;*/
+	
+	/*position: relative;
+	width: 100%;
+	height: 100%;*/
+	
+	/*margin: 0 auto;
+    padding-left: 10px; /* the space between the start of your logo and your text */
+	/*padding-right: 10px;
+    padding-top: 0.2em; /* the vertical space between the top and your text, to center the logo*/
+	/*padding-bottom: 0.2em;
+	/*display: block; /* very important since normally anchors are inline */
+
+}
+
+#logo img {
+	height: 135px;
+	width: 150px;
+	position: absolute;
+   
+	/*Centering Method 2*/
+	margin: 0px 0 0 -75px;
+	left: 50%;
+	
+	/*left: 50%;
+	margin: 0 0 0 -75px;	
+	width:150px;*/
+	
+	/*display: block;*/
+	/*max-width: 150px;
+	max-height: 135px;
+	width: 100%;
+	margin: 0 auto;
+	float: none;*/
+	
+}
+
+element.style {
+    height: 300px;
+    width: 400px;
+}
+#youtubechannel-player {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.views_slideshow_cycle2_slide {
+    max-width: 100%;
+}
+
+.views_slideshow_cycle2_slide  img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*force centre interim slide show*/
+
+#block-views-slide_show-block div.block-inner {
+		padding-left:6px;
+}
+
+/*remove default rss feed icon*/
+
+.feed-icon {
+	display: none;
+}
+
+#main {
+    background-color: transparent;
+}
+
+/* surveys and forms should fit on a blackberry */
+ @media only screen and (max-width : 500px) 
+ {
+ .draggable-form-item {
+    display: inline-block !important;
+    float: left !important;
+    padding-bottom: 10px;
+    padding-right: 17px;
+    position: static !important;
+}
+}
+
+/* front page news articles - smaller picture, floats left */
+
+.view-tracker.view-display-id-block_2  .views-field-field-poster {
+
+    float: left;
+    margin-right: 15px;
+}
+.view-tracker.view-display-id-block_2  .views-row {
+    clear: both;
+}

@@ -1,0 +1,42 @@
+
+#sidebar-second, #navigation, #header-region, #footer, .tabs, #sponsors, #banner_img {
+   display: none;
+}
+
+.messages.status, .action-links {
+    display: none;
+}
+
+#header {
+    height: 0;
+}
+
+#header img {
+    width: 150px;
+	margin-left: 0;
+}
+
+#edit-click_to_print-draggable-wrapper {
+    display: none;
+}
+
+/* kultrun logo */
+#markup_element_e8xG73wyQk,
+#markup_element_iCmX0g6Vml {
+    position: fixed;
+	margin-right: 5cm;
+	left: 60% !important;
+}
+
+#main {
+	clear: both;
+}
+
+.form-actions {
+	display: none;
+}
+
+/* hide the checkbox for "signed" */
+.form-item-submitted-civicrm-1-contact-1-cg11-custom-38-1 {
+    display: none;
+}

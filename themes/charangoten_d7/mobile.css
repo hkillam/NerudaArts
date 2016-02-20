@@ -1,0 +1,178 @@
+/* neruda red:  #981B1E */
+
+/* ticket background. */
+.panels-flexible-region-27-ticket,
+.node-type-event  .panel-col-last  {
+    background-color: #ECE5DF;
+	margin-bottom: 15px;
+    padding-left: 7px;
+    padding-top: 10px;	
+}
+
+
+ul, li, ul li.collapsed, ul li.expanded, ul li.leaf {
+    color: black;
+}
+
+/* don't let images get too big for their britches */
+.pane-content img,
+.field-type-image img,
+.content img {
+    height: auto !important;
+    max-width: 100%;
+}
+
+
+/* superfish menus */
+
+.sf-menu.sf-style-white li, .sf-menu.sf-style-white.sf-navbar  {
+    background-color: transparent;
+}
+
+.sf-menu.sf-style-white a {
+    border: none;
+    color: #981B1E;
+    padding: 0.75em 1em 0.75em 0.6em;
+    font-size: 1.4em;
+    text-transform: lowercase;
+}
+
+.sf-menu.sf-style-white a.sf-with-ul {
+    padding-right: 0.3em;
+}
+
+.sf-menu.sf-style-white {
+    margin-bottom: 0;
+}
+
+#block-superfish-1 {
+    border: thin solid #F0F0F0;
+    background: url("images/translucentwhite.png");
+}
+
+#block-superfish-1 .block-inner {
+
+    clear: both;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.block ul, .item-list ul {
+    margin: 0;
+}
+
+a > .sf-sub-indicator {
+    background-position: 0 -100px;
+    top: 0.8em;
+}
+
+
+.sf-menu.sf-style-white a.sf-with-ul {
+    padding-right: 1.5em;
+}
+
+#block-superfish-1  select {
+    color: #981B1E;
+    padding: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+	text-transform: lowercase;
+	font-size: 1.4em;
+}
+
+
+/* when the screen size is < 850px, the side bar slides out of the grey background.  */
+@media only screen and (max-width : 850px) 
+ {
+	#sidebar-second {
+		background-color: #D1D1D1;
+		padding-left: 5px;
+	}
+ }
+ 
+ /* under 600px the background gets cluttered.  */
+@media only screen and (max-width : 610px) 
+ {
+	body {
+		background-image: none;
+	}
+	#block-superfish-1 {
+		border: none;
+	}	
+	#block-superfish-1 .block-inner  {
+	    border-right: none;
+	}
+	
+	.page-kultrun .panel-col-first,
+	.page-kultrun  .panel-col-last {
+	    width: 100%;
+	}
+ }
+ 
+ /* side bar goes below at around 462 px.  both should then fill 100% */
+ /* rules say this happens at 480, and the content is 100%.  Then it is overwritten in neruda.css */
+ @media only screen and (max-width : 500px) {
+	 .one-sidebar.sidebar-second #content {
+		margin-left: 1.8%;
+		width: 100%;
+		background-color: white;  
+		padding-right: 10px;
+	}
+
+
+	#sidebar-second {
+		margin-left: 4%;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	/* header icons rearrange when they don't fit beside the logo */
+
+	#header-region {
+		width: 100%;
+		height: auto;
+	}
+	#block-block-7 {
+		left: 0;
+		float: left;
+	}
+	#block-block-8 {
+		float: left;
+	}
+	#block-block-9 {
+		float: left;
+		margin-right: 10px;
+	}
+	#block-block-14 {
+    float: left;
+    min-width: 121px;
+	}
+	
+	#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+		float: left;
+		margin-left: 0;
+		margin-right: 20px;
+		padding: 0;
+		width: 28%;
+	}
+	
+ }
+ 
+ @media only screen and (max-width : 340px) {
+ 	#quadrant-left, #quadrant-centre-left, #quadrant-centre-right, #quadrant-right {
+		float: left;
+		margin-left: 0;
+		margin-right: 20px;
+		padding: 0;
+		width: 42%;
+	}
+	#quadrant-centre-right {
+	    clear: both;
+	}
+	
+	.node-type-event .panel-col-first,
+    .node-type-event .panel-col-last	{
+	    width: 100%;
+	}
+ }
