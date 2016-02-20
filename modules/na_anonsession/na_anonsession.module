@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function na_anonsession_base_init() {
+  if (!isset($_SESSION['na_anonsession'])) {
+    $_SESSION['na_anonsession'] = 'session_initialized';
+  }
+}
+

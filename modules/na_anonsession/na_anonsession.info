@@ -1,0 +1,6 @@
+name = Neruda Arts Anonymous Session
+description = Creates a session for anonymous users, so that they can subscribe to the newsletter.  Custom module for Neruda Arts.
+core = 7.x
+
+files[] = na_anonsession.module
+
