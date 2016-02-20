@@ -1,0 +1,35 @@
+name = Neruda 2015
+description = This is a sub-theme of theme Bootstrap
+core = 7.x
+base theme = bootstrap
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+;stylesheets[all][]   = css/html-elements.css
+;stylesheets[all][]   = css/neruda.css
+stylesheets[all][]   = css/style.css
+;stylesheets[all][]   = css/mobile.css
+stylesheets[print][] = css/print.css
+stylesheets[all][]   = css/heather.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+
+regions[header] = Top Bar
+regions[navigation] = Navigation
+regions[jumbotron] = Jumbotron
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Primary
+regions[sidebar_second] = Secondary
+regions[footer1] = Footer Left
+regions[footer2] = Footer Center
+regions[footer3] = Footer Right
+
+
+
