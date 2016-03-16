@@ -15,16 +15,30 @@
 
 <p>
 <?php print t('Products:'); ?><br />
-<?php foreach ($products as $product): ?>
-- <?php print $product->qty; ?> x <?php print $product->title; ?> - <?php print $product->total_price; ?><br />
-&nbsp;&nbsp;<?php print t('SKU'); ?>: <?php print $product->model; ?><br />
-    <?php if (!empty($product->data['attributes'])): ?>
-    <?php foreach ($product->data['attributes'] as $attribute => $option): ?>
-    &nbsp;&nbsp;<?php print t('@attribute: @options', array('@attribute' => $attribute, '@options' => implode(', ', (array)$option))); ?><br />
-    <?php endforeach; ?>
-    <?php endif; ?>
+<?php
+$context = array(
+  'revision' => 'themed',
+  'type' => 'order_product',
+  'subject' => array(
+    'order' => $order,
+  ),
+);
+foreach ($products as $product) {
+  $price_info = array(
+    'price' => $product->price,
+    'qty' => $product->qty,
+  );
+  $context['subject']['order_product'] = $product;
+?>
+- <?php print $product->qty; ?> x <?php print $product->title .' - '. uc_price($price_info, $context); ?><br />
+&nbsp;&nbsp;<?php print t('SKU: ') . $product->model; ?><br />
+    <?php if (isset($product->data['attributes']) && is_array($product->data['attributes']) && count($product->data['attributes']) > 0) {?>
+    <?php foreach ($product->data['attributes'] as $attribute => $option) {
+      print '&nbsp;&nbsp;'. t('@attribute: @options', array('@attribute' => $attribute, '@options' => implode(', ', (array)$option))) .'<br />';
+    } ?>
+    <?php } ?>
 <br />
-<?php endforeach; ?>
+<?php } ?>
 </p>
 
 <p>
