@@ -7,12 +7,10 @@ base theme = bootstrap
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-;stylesheets[all][]   = css/html-elements.css
-;stylesheets[all][]   = css/neruda.css
+
 stylesheets[all][]   = css/style.css
-;stylesheets[all][]   = css/mobile.css
 stylesheets[print][] = css/print.css
-stylesheets[all][]   = css/heather.css
+stylesheets[all][]   = css/neruda.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
