@@ -321,4 +321,18 @@ h2 a:hover, h3 a:hover {
   display: none;
 }
 
+.btn-info {
+  background-color: #ba5431;
+  border-color: #ba5431;
+  color: #ffffff;
+}
+
+.btn-info .glyphicon {
+  color: #fff;
+}
+
+#uc-cart-view-form .form-actions {
+  margin-top: 15px;
+  text-align: right;
+}
 
