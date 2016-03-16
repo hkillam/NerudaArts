@@ -80,7 +80,7 @@
 	    <div class="col-sm-4">
 		   &nbsp;
 	    </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-xs-6">
 
           <div class="navbar-header">
       
@@ -99,7 +99,7 @@
         
       </div><!-- /col-sm-4-->
 	  
-	  <div class="col-sm-4">
+	  <div class="col-sm-4 col-xs-6">
               <?php if (!empty($page['header'])): ?>
                 <?php print render($page['header']); ?>
               <?php endif; ?>

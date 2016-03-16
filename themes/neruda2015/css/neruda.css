@@ -321,7 +321,7 @@ h2 a:hover, h3 a:hover {
   display: none;
 }
 
-.btn-info {
+.btn-info, .btn-primary {
   background-color: #ba5431;
   border-color: #ba5431;
   color: #ffffff;
@@ -334,5 +334,23 @@ h2 a:hover, h3 a:hover {
 #uc-cart-view-form .form-actions {
   margin-top: 15px;
   text-align: right;
+}
+
+
+@media (max-width: 550px) {
+	.jumbotron {
+	  margin-left: 0;
+	  margin-right: 0;
+	  padding-left: 0;
+	  padding-right: 0;
+	  width: 100%;
+	}	
+	#jumbotron .container {
+	  padding: 0;
+	}
+
+	.logo img {
+	  width: 80px;
+	}	
 }
 
