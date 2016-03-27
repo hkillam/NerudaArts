@@ -275,7 +275,9 @@ img {
 .page-cart-checkout .page-header-image,
 .page-cart .page-header-image, 
 .page-user  .page-header-image,
-.page-node-submission .page-header-image {
+.page-node-submission .page-header-image,
+.page-admin .page-header-image,
+.page-node-delete .page-header-image  {
   background-image: none;
   height: 52px;
 }
@@ -283,7 +285,9 @@ img {
 .page-cart h1, 
 .page-cart-checkout  h1,
 .page-user h1,
-.page-node-submission h1 {
+.page-node-submission h1,
+.page-admin h1,
+.page-node-delete h1 {
   top: 0;
 }
 
@@ -321,7 +325,7 @@ h2 a:hover, h3 a:hover {
   display: none;
 }
 
-.btn-info, .btn-primary {
+.btn-info, .btn-primary, .btn-success {
   background-color: #ba5431;
   border-color: #ba5431;
   color: #ffffff;
@@ -335,6 +339,62 @@ h2 a:hover, h3 a:hover {
   margin-top: 15px;
   text-align: right;
 }
+
+#panels-dnd-main div.panel-region h2.label {
+  color: #e9e9e9;
+  font-size: 13pt;
+  margin: 0 0 0.5em;
+  padding-right: 16px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #666;
+  vertical-align: middle;
+}
+
+
+
+.hasCountdown {
+  background-color: transparent;
+  background-image: url("/sites/all/themes/kultrun2016/images/countdown-bg.jpg");
+  border: 0 none;
+  color: #fff;
+}
+
+.countdown_descr {
+  text-align:  left;
+  font-weight: bold;
+  font-size:62px;
+  text-transform: uppercase;
+  font-family: Roboto, Calibri;
+}
+
+.countdown_section {
+  text-align:  left;
+  max-width: 130px;
+}
+.countdown_show4.countdown_row {
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: Roboto, Calibri;
+  text-align:  left;
+}
+
+.countdown_row .countdown_amount {
+	color: #FFF200;
+	font-size: 45px;
+}
+
+.countdown_section:nth-child(2) .countdown_amount {
+	color: #FF8A00;
+}
+.countdown_section:nth-child(3) .countdown_amount {
+	color: #00B9FF;
+}
+.countdown_section:nth-child(4) .countdown_amount {
+	color: #8DC63F;
+}
+
+
 
 
 @media (max-width: 550px) {
