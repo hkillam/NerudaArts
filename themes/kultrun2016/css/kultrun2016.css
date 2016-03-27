@@ -1,0 +1,273 @@
+/* here is what I do to bootstrap to make it our own thing */
+
+/* really big titles, such as the Who we are on the home page */
+.emphatic-title h2 {
+font-weight:700;font-size:36px;line-height: normal;color:#92278f;	
+}
+.emphatic-title.white-title h2 {
+ text-align: center;
+ color:#fff;	
+}
+/* page headers for most pages - see lineup */
+.sub-title-inner h2 {
+  background-image: url("/wordpress/eventum/wp-content/themes/eventum/images/banner-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 13px 0;
+}
+
+/* h3 - such as artist names on the lineup page */
+h3 {
+  color: #333;
+    font-size: 18px;
+    line-height: 1;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+	text-align: left;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h3 a {
+    color: #333;
+}
+#whos-performing h3 a {
+    color: #fff;
+}
+
+.neruda_presents > img {
+  max-width: 25%;
+}
+
+.kultrun-logo {
+  max-width: 75%;
+}
+
+#masthead {
+    background-color: rgba(41, 51, 63, 0.95);
+	
+}
+.kultrun-home #masthead {
+  background-color:  transparent;
+}
+#masthead.stickynav-active {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    margin: 0 auto 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+	margin: auto;
+}
+#masthead.stickynav-active {
+    background-color: rgba(41, 51, 63, 0.95);
+}
+
+
+#nice-menu-1 {
+    display: block;
+    float: right;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+}
+
+body {
+    color: #333;
+	font-family: Roboto, Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+}
+ul.nice-menu-down li {
+  border: 0;
+}
+ul.nice-menu li {
+	background-color: transparent;
+}
+
+
+/* home page, first block (with counter) */
+.top-row {
+  background-image: url("../images/countdown-bg.jpg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding-bottom: 250px !important;
+  padding-top: 190px !important;
+}
+
+
+#whos-performing {
+  background-image: url("../images/who-is-speaking.png") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  margin: 0 !important;
+  padding-bottom: 100px !important;
+  padding-top: 70px !important;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-fluid .container {
+  float: none;
+  margin: auto;
+
+}
+
+.hasCountdown {
+  background-color: transparent;
+  border: 0 none;
+  color: #fff;
+}
+
+.countdown_descr {
+  text-align:  left;
+  font-weight: bold;
+  font-size:62px;
+  text-transform: uppercase;
+  font-family: Roboto, Calibri;
+}
+
+.countdown_section {
+  text-align:  left;
+  max-width: 130px;
+}
+.countdown_show4.countdown_row {
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: Roboto, Calibri;
+  text-align:  left;
+}
+
+.countdown_row .countdown_amount {
+	color: #FFF200;
+	font-size: 45px;
+}
+
+.countdown_section:nth-child(2) .countdown_amount {
+	color: #FF8A00;
+}
+.countdown_section:nth-child(3) .countdown_amount {
+	color: #00B9FF;
+}
+.countdown_section:nth-child(4) .countdown_amount {
+	color: #8DC63F;
+}
+
+
+.top-row .pane-2 {
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+	background-color: transparent;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-family: Roboto, Calibri;
+}
+
+.panels-flexible-region {
+  margin-bottom: 100px !important;
+  margin-top: 70px !important; 
+}
+
+
+.page-header {
+  border: 0 none;
+  margin: 180px 0 50px;
+  text-align: center;
+    color: #000000;
+    font-size: 48px;
+    font-weight: bold;
+  background-image: url("../images/banner-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 13px 0;
+}
+
+.kultrun-home .panels-flexible-region-32-center {
+  float:  none;
+  width: 100%;
+}
+
+.menu-9434 a {
+  background-color: #ff8a00;
+  border-radius: 6px;
+  margin-left: 40px;
+}
+.menu-9434 a:hover,
+.menu-9434 a:active {
+	background-color: #d67400;
+}
+
+
+.page-kultrun-vendor-sales .panels-flexible-region-inside a {
+    color: #016896;
+}
+.page-kultrun-vendor-sales .panels-flexible-region-inside a:hover,
+.page-kultrun-vendor-sales .panels-flexible-region-inside a:active {
+    color: #fff;
+	background-color: #016896;
+}
+
+.purple-button, .green-button {
+  background: #561554 none repeat scroll 0 0;
+  border-radius: 4px;
+  color: #ffffff !important;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 20px 20px 0;
+  padding: 15px 30px;
+}
+.purple-button:hover,
+.purple-button:active {
+	background-color: #421041;
+	color: #fff !important;
+}
+.green-button {
+	background-color: #8AC329;
+}
+.green-button:hover,
+.green-button:active {
+	background-color: #6D9920;
+	color: #fff;
+}
+
+.vendor-choices , #vendor-sales {
+
+  background-image: url("../images/bg2.jpg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  margin-bottom: 0 !important;
+  margin-top: 60px !important;
+  padding-bottom: 100px !important;
+  padding-top: 100px !important;
+}
+.page-kultrun-vendor-sales .panels-flexible-region-inside p {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.sppb-pricing-price {
+    font-size: 50px !important;
+    line-height: 1;
+}
+
+/* vendor sales:  white background on each product */
+.page-kultrun-vendor-sales .panels-flexible-region-inside {
+  background-color: rgba(237, 95, 91, .7);
+  background-color: rgba(365, 365, 365, .7);
+  margin-left: 40px;
+  padding-top: 25px;
+  margin-right: 40px;
+}
+
