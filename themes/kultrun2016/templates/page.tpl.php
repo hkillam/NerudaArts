@@ -90,8 +90,15 @@
 					<div class="navbar-header">
 					
 						<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+								<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								  <span class="sr-only">Toggle navigation</span>
+								  <span class="icon-bar"></span>
+								  <span class="icon-bar"></span>
+								  <span class="icon-bar"></span>
+								</button>
 						  <div class="navbar-collapse collapse">
-							<nav role="navigation">
+							<nav role="navigation" class = "navbar navbar-default">
 							  <?php if (!empty($page['navigation'])): ?>
 								<?php print render($page['navigation']); ?>
 							  <?php endif; ?>
@@ -99,13 +106,6 @@
 						  </div>
 						<?php endif; ?>
 					</div>
-					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					  <span class="sr-only">Toggle navigation</span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					</button>
 				
 			    </div><!-- /col-sm-9-->
 
@@ -205,9 +205,9 @@
   </div>
 </div>
 <footer class="footer container-fluid">
-  <div class="row">
+  <div >
 
-      <div class="col-md-12">
+      <div >
         <div class="col-md-4"><?php print render($page['footer1']); ?></div>
         <div class="col-md-4"><?php print render($page['footer2']); ?></div>
         <div class="col-md-4"><?php print render($page['footer3']); ?></div>

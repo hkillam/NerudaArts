@@ -277,7 +277,11 @@ img {
 .page-user  .page-header-image,
 .page-node-submission .page-header-image,
 .page-admin .page-header-image,
-.page-node-delete .page-header-image  {
+.page-node-delete .page-header-image,
+.page-neruda-docs .page-header-image,
+.node-type-editing-checklist .page-header-image,
+.page-node-webform-components  .page-header-image,
+.page-node-webform-results .page-header-image {
   background-image: none;
   height: 52px;
 }
@@ -287,7 +291,11 @@ img {
 .page-user h1,
 .page-node-submission h1,
 .page-admin h1,
-.page-node-delete h1 {
+.page-node-delete h1,
+.page-neruda-docs h1,
+.node-type-editing-checklist h1,
+.page-node-webform-components,
+.page-node-webform-results h1 {
   top: 0;
 }
 

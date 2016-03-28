@@ -271,3 +271,55 @@ ul.nice-menu li {
   margin-right: 40px;
 }
 
+.view-id-festival_schedule caption,
+.view-festival-schedule h3 {
+  color: #ed145b;
+  float: left;
+  font-size: 40px;
+  font-weight: 900;
+  width: 25%;
+}
+.view-festival-schedule .item-list > ul {
+  background-color: #f9f9f9;
+  float: left;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  width: 75%;
+}
+.view-festival-schedule li {
+    list-style: outside none none;
+}
+
+/* labels for the columns are inline - grab the first and pretty it. hide the rest */
+.views-field > span:first-child {
+  display: none !important;
+}
+.view-festival-schedule li:first-child .views-field > span:first-child {
+  color: #92278F;
+  display: inline-block !important;
+  font-weight: 700;
+  width: 100%;
+    font-size: 18px;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+.view-festival-schedule  .field-content {
+  font-weight: 400;
+}
+
+.view-festival-schedule .views-field {
+  background-color: #f9f9f9;
+  border-top: 1px solid #efefef;
+  padding-top: 10px;
+}
+
+.view-id-festival_schedule thead {
+  float: left;
+  width: 75%;
+}
+.view-id-festival_schedule tbody {
+  float: left;
+  width: 75%;
+}
