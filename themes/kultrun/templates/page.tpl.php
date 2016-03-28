@@ -73,16 +73,14 @@
  * @ingroup themeable
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-    
-  <div class="container">  
-    <div class="row">
-
-        <div class="col-sm-12">
+<header id="navbar" role="banner" class="<?php //print $navbar_classes; ?> site-header header">
+ 	<div id="header-container">   
+  <div class="container-fluid">  
+<div    id="menubar" role="banner" class="<?php //print $navbar_classes; ?>">
+<div class="container">
+        <div class="col-xs-6 col-sm-3">
 
           <div class="navbar-header">
-     
-
           </div>
               <?php if (!empty($page['header'])): ?>
                 <?php print render($page['header']); ?>
@@ -93,13 +91,7 @@
         
       </div><!-- /col-sm-4-->
 
-    </div><!-- /row -->   
-   </div >  
-</header>
-<div    id="menubar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">     
-    <div class="row">
-      <div class="col-md-12">
+<div class = "col-xs-6 col-sm-9"	 >
 
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -120,13 +112,15 @@
           </div>
         <?php endif; ?>
       </div>
-    </div>
+    
 
 
-  </div> <!-- /container-fluid -->
-
-</div>
-
+  </div> 
+</div>  <!-- container - inner container in header to keep menu centered -->
+    </div><!-- /row -->   
+   </div >  
+   </div>
+</header>
 
 
 <!-- JUMBOTRON for the Carousel -->
@@ -141,12 +135,19 @@
 
 <!-- MAIN CONTAINER -->
 
-<?php if (!drupal_is_front_page()): ?>
+
+
+
+<!-- typically we use the $is-front variable, but this is a subsite.  So find something in the page to show us if it is the kultrun home page -->
+<?php 
+   $frontloggedin = strpos (substr ( $variables['page']['content']['system_main']['content']['#markup'] , 0 ,300 ),"kultrun-home-page");
+   $frontanon = strpos (substr ( $variables['page']['content']['system_main']['main']['#markup'] , 0 ,300 ),"kultrun-home");
+   if ($frontloggedin + $frontanon > 0 ): ?>
+<div class="main-container container-fluid kultrun-front">
+<?php else: ?>
 <div class="main-container container">
 <?php endif; ?>
-<?php if (drupal_is_front_page()): ?>
-<div class="main-container container">
-<?php endif; ?>
+
 
 
   <div class="row">
@@ -228,13 +229,8 @@
 
   </div>
 </div>
-<footer class="footer container">
-  <div class="row">
-
-      <div class="col-md-12">
-        <div class="col-md-4"><?php print render($page['footer1']); ?></div>
-        <div class="col-md-4"><?php print render($page['footer2']); ?></div>
-        <div class="col-md-4"><?php print render($page['footer3']); ?></div>
-      </div>
-  </div>
+<footer class="footer container-fluid clearfix">
+	<div class="col-md-4"><?php print render($page['footer1']); ?></div>
+	<div class="col-md-4"><?php print render($page['footer2']); ?></div>
+	<div class="col-md-4"><?php print render($page['footer3']); ?></div>
 </footer>
